@@ -2,32 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image'
+import { aboutMe } from '../content/aboutMe';
+// import '../css/mobile.css';
 
 export default function Profile({ data }) {
-
-  const aboutMe = `Full Stack Software Developer with 8 years of Engineering
-  experience and a passion for diving under the hood to get a
-  deeper understanding on new technology.
-  When I'm not helping my friends fix something
-  they broke, you can find me enjoying the outdoors.`
-
-   return (
-    <>
-      <div css={
-        {
-          height: '54px'
+  return (
+    <section className='Profile'>
+      <div css={{ height: '54px' }}></div>
+      <section className='pcView' css={{
+        display: 'none',
+        '@media (min-width: 720px)': {
+          display: 'block'
         }
-      }></div>
+      }}>
 
-      <section css={
-
-        {
-          display: 'none',
-          '@media (min-width: 720px)': {
-            display: 'block'
-          }
-        }
-      }>
         <BackgroundImage fluid={data.banner.childImageSharp.fluid}>
           <div css={{
             display: 'flex', flexDirection: 'row', justifyContent: 'center'
@@ -55,26 +43,28 @@ export default function Profile({ data }) {
           </div>
         </BackgroundImage>
       </section>
-      <section css={{
-      
+      <section className="mobileView" css={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         '@media (min-width: 720px)': {
           display: 'none'
-        }}}>
-             <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
-              width: '100%', height: 'auto',
-               zIndex: '2'
-            }} />
-            <p css={{
-             padding:'30px 20px 0 20px',
-             color:'white'
-            }}>{aboutMe}</p>
+        }
+      }}>
+        <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
+          width: '100%', height: 'auto',
+          zIndex: '2'
+        }} />
+        <p css={{
+          padding: '30px 20px 0 20px',
+          color: 'white',
+      
+         
+        }}>{aboutMe}</p>
 
       </section>
 
-    </>
+    </section>
   )
 }
 
