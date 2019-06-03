@@ -341,7 +341,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  
+  list-style-type: none;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;

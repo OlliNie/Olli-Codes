@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { UPDATED } from '../content/footer'
 
 import Header from "./header"
 import "./layout.css"
@@ -33,10 +34,8 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer css={{height:'75px', backgroundColor:'#99cc00', display: 'flex', justifyContent:'center', color: 'white'}}>
+            <p css={{alignSelf:'center'}}>{UPDATED}</p>
           </footer>
         </div>
       </>

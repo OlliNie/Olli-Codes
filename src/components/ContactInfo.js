@@ -4,6 +4,6 @@ import { contactInfo } from '../content/contact';
 
 export default function renderContactInfo(){
  return(
-   <RenderIcon iconArray={contactInfo}/>
+   <RenderIcon iconArray={contactInfo} direction='column' />
  )
 }

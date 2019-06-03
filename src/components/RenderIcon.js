@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-export default function RenderIcon({ iconArray }) {
+export default function RenderIcon({ iconArray, direction }) {
   const contactList = iconArray.map((icon, i) => {
     if (icon.link && icon.text && icon.icon) {
       return <li key={i} css={{ alignSelf: 'center', color: 'white' }}>
@@ -24,7 +24,7 @@ export default function RenderIcon({ iconArray }) {
         </div>
       </li>
     }
-    else return <li key={i} css={{ alignSelf: 'center', color: 'white' }}>
+    else return <li key={i} css={{ alignSelf: 'center', color: 'white', fontSize: '32px' }}>
       <div>
         <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
       </div>
@@ -34,7 +34,7 @@ export default function RenderIcon({ iconArray }) {
     <ul css={{
       listStyleType: 'none',
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: `${direction}`,
       justifyContent: 'center',
 
     }}>

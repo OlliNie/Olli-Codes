@@ -57,13 +57,9 @@ export default function Profile({ data }) {
         }} />
         <p css={{
           padding: '30px 20px 0 20px',
-          color: 'white',
-      
-         
+          color: 'white',   
         }}>{aboutMe}</p>
-
       </section>
-
     </section>
   )
 }
