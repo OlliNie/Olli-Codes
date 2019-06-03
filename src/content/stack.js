@@ -1,8 +1,10 @@
 import React from 'react';
-import { FaHtml5, FaReact, FaCss3Alt, FaNodeJs, DiMongodb, DiFirebase, DiJavascript } from 'react-icons/fa';
+import { FaHtml5, FaReact, FaCss3Alt, FaNodeJs } from 'react-icons/fa';
+
+import {DiMongodb, DiFirebase, DiJavascript} from 'react-icons/di'
 
 
-export const fontEndStack = [
+export const frontEndStack = [
   {
     icon: <FaHtml5/>,
   },

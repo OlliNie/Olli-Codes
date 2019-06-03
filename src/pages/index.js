@@ -4,22 +4,18 @@ import Layout from "../components/layout";
 import Profile from '../components/Profile';
 import MobileDevider from '../components/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
-
-import {CONTACT, STACK} from '../content/titles';
+import FrontEndStack from '../components/FrontEndStack';
+import BackEndStack from '../components/BackEndStack';
 
 
 
+import {CONTACT, FRONT_END, BACK_END, PROJECTS} from '../content/titles';
  
-library.add(fab, faCoffee, faPhone );
 
 
 const IndexPage = () => (
 
-
-  <StaticQuery query={graphql`
+<StaticQuery query={graphql`
   {
     faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
           childImageSharp{
@@ -51,7 +47,11 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <Profile data={data}/>
           <MobileDevider title={CONTACT}/>
           <ContactInfo/>
-          <MobileDevider title={STACK}/>
+          <MobileDevider title={FRONT_END}/>
+          <FrontEndStack/>
+          <MobileDevider title={BACK_END}/>
+          <BackEndStack/>
+          <MobileDevider title={PROJECTS}/>
         </Layout>
       )
     }} />
