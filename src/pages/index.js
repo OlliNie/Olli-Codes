@@ -6,6 +6,7 @@ import MobileDevider from '../components/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
 import FrontEndStack from '../components/FrontEndStack';
 import BackEndStack from '../components/BackEndStack';
+import Projects from '../components/Projects';
 
 
 
@@ -52,6 +53,7 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <MobileDevider title={BACK_END}/>
           <BackEndStack/>
           <MobileDevider title={PROJECTS}/>
+          <Projects/>
         </Layout>
       )
     }} />

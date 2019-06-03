@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     title:'Studio Taimela',
     body:`I am excited about the opportunity to 
