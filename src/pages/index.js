@@ -2,8 +2,8 @@ import React from "react";
 import {StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Profile from '../components/Profile';
-import MobileDevider from '../components/MobileDevider'
-
+import MobileDevider from '../components/MobileDevider';
+import ContactInfo from '../components/ContactInfo';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -50,6 +50,7 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
         <Layout>
           <Profile data={data}/>
           <MobileDevider title={CONTACT}/>
+          <ContactInfo/>
         </Layout>
       )
     }} />

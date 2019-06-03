@@ -3,6 +3,10 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -337,7 +341,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -388,7 +392,6 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 figure {
   margin-left: 0;
@@ -527,7 +530,8 @@ li > ol {
   margin-top: calc(1.45rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
+
+  
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }

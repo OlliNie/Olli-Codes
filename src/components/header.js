@@ -6,7 +6,6 @@ const Header = () => (
   <header
     css={{
       background: '#99CC00',
-   
       display: 'flex',
       flexDirection: 'row',
       position:'fixed',
