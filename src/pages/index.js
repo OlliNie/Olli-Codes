@@ -8,7 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {  faCoffee, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import {CONTACT} from '../content/titles';
+import {CONTACT, STACK} from '../content/titles';
 
 
 
@@ -51,6 +51,7 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <Profile data={data}/>
           <MobileDevider title={CONTACT}/>
           <ContactInfo/>
+          <MobileDevider title={STACK}/>
         </Layout>
       )
     }} />

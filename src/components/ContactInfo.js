@@ -6,7 +6,7 @@ import { contactInfo } from '../content/contact';
 export default function ContactInfo() {
   const contactList = contactInfo.map((contact, i) => {
     if (contact.link) {
-      return <li key={i} css={{alignSelf: 'center'}}>
+      return <li key={i} css={{alignSelf: 'center', color:'white'}}>
         <a css={{ display: 'flex',}} href={contact.link}>
           <div css={{ display: 'flex', justifyContent: 'center'}}>
             <p css={{alignSelf: 'center', margin: '0 10px 0 0'}}>{contact.icon}</p>
@@ -16,7 +16,7 @@ export default function ContactInfo() {
         </a>
       </li>
     }
-    return <li key={i} css={{alignSelf: 'center'}}>
+    return <li key={i} css={{alignSelf: 'center', color:'white'}}>
       <div css={{ display: 'flex', justifyContent: 'center'}}>
         <p css={{alignSelf: 'center', margin: '0 10px 0 0'}}>{contact.icon}</p>
         <p css={{alignSelf: 'center', margin: '0'}}>{contact.text}</p>
