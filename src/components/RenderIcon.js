@@ -4,7 +4,9 @@ import React from 'react';
 
 
 export default function RenderIcon({ iconArray, direction }) {
-  const contactList = iconArray.map((icon, i) => {
+  console.log('direction in render icon', direction);
+  
+  const iconList = iconArray.map((icon, i) => {
     if (icon.link && icon.text && icon.icon) {
       return <li key={i} css={{ alignSelf:'center', color: 'white'}}>
         <a css={{ display: 'flex', }} href={icon.link}>
@@ -26,20 +28,22 @@ export default function RenderIcon({ iconArray, direction }) {
       </li>
     }
     else return <li key={i} css={{ alignSelf: 'center', color: 'white', fontSize: '32px' }}>
-      <div>
+      <div css={{display:'flex'}}>
         <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
       </div>
     </li>
   })
   return (
-    <ul css={{
+    <ul className='test'
+      css={{
       listStyleType: 'none',
       display: 'flex',
       flexDirection: `${direction}`,
       justifyContent: 'space-around',
-      flexGrow: 1
+      flexGrow: 1,
+
     }}>
-      {contactList}
+      {iconList}
     </ul>
   )
 }

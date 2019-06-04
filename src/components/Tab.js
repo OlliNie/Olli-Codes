@@ -19,7 +19,9 @@ function Tab({ title }) {
         display: 'none',
         flexDirection: 'column',
         '@media (min-width: 720px)': {
-          display: `flex`,
+        display: `flex`,
+
+        marginLeft: '20px'
         }     
       }
     }>

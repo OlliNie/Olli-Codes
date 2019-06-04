@@ -2,11 +2,12 @@ import React from 'react';
 import RenderIcon from './RenderIcon';
 import { contactInfo } from '../content/contact';
 import Tab from './Tab';
+import { CONTACT } from '../content/titles';
 
 export default function renderContactInfo() {
   return (
-    <section css={{ display: 'flex' }}>
-      <Tab title='CONTACT' />
+    <section css={{ display: 'flex', marginBottom:'30px' }}>
+      <Tab title={CONTACT} />
       <section css={{
         display: 'flex',
         flexGrow: 1,

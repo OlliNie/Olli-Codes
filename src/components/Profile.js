@@ -10,6 +10,7 @@ export default function Profile({ data }) {
     <section className='Profile'>
       <div css={{ height: '54px' }}></div>
       <section className='pcView' css={{
+        marginBottom: '30px',
         display: 'none',
         '@media (min-width: 720px)': {
           display: 'block'

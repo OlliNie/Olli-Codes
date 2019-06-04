@@ -4,13 +4,12 @@ import Layout from "../components/layout";
 import Profile from '../components/Profile';
 import MobileDevider from '../components/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
-import FrontEndStack from '../components/FrontEndStack';
-import BackEndStack from '../components/BackEndStack';
 import Projects from '../components/Projects';
+import Stacks from '../components/Stacks';
 
 
 
-import {CONTACT, FRONT_END, BACK_END, PROJECTS} from '../content/titles';
+import {CONTACT, PROJECTS} from '../content/titles';
  
 
 
@@ -48,10 +47,11 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <Profile data={data}/>
           <MobileDevider title={CONTACT}/>
           <ContactInfo/>
-          <MobileDevider title={FRONT_END}/>
+          {/* <MobileDevider title={FRONT_END}/>
           <FrontEndStack/>
           <MobileDevider title={BACK_END}/>
-          <BackEndStack/>
+          <BackEndStack/> */}
+          <Stacks/>
           <MobileDevider title={PROJECTS}/>
           <Projects/>
         </Layout>
