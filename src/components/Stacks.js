@@ -1,35 +1,27 @@
 import React from 'react';
-import {STACK} from '../content/titles';
-import FrontEndStack from './FrontEndStack';
-import BackEndStack from './BackEndStack';
+import { STACK } from '../content/titles';
 import Tab from './Tab';
+import PcStack from './destkopScreen/PcStack';
+import MobileStacks from './mobileScreen/MobileFrontEndStack';
 
 export default function Stacks() {
   console.log('stack', STACK);
   return (
-    <section css={{display:'flex', marginBottom:'30px'}}>
-      <Tab title={STACK}/>
-      <section css={{display:'none',
-       flexDirection:'row',
-       flexGrow:1,
-       justifyContent: 'space-around',
-       '@media (min-width: 720px)': {
-        display: `flex`,
-     
-      }
-       }}>
-        <FrontEndStack direction='column' />
-        <BackEndStack direction ='column'/>
+    <section css={{ display: 'flex', marginBottom: '30px', width:'100%' }}>
+      <Tab title={STACK} />
+      <section css={{display:'flex', justifyContent:'center', width:'100%'}}>
+        <PcStack />
       </section>
-      <section css={{display:'flex',
-       flexDirection:'column',
-       width:'100%',
-       '@media (min-width: 720px)': {
-        display: `none`,
-      }
-       }}>
-        <FrontEndStack direction='row' />
-        <BackEndStack direction ='row'/>
+      <section css={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100%',
+        '@media (min-width: 720px)': {
+          display: `none`,
+        }
+      }}>
+        <MobileStacks />
+
       </section>
     </section>
 

@@ -32,3 +32,18 @@ export const backEndStack = [
     icon: <DiJavascript/>
   },
 ]
+
+export const aboutFrontEnd = `
+My favorite part of working in the FrontEnd is the ability to use
+the React frame work.  Jumping from creating websites with vanilla JavaScript 
+was a huge game changer, and I am allways excited to learn about new patterns
+such as React Hooks.
+`;
+
+export const aboutBackEnd =`
+I really enjoy working on the BackEnd, especially since Node.js allows
+JavaScript to run on server side code.  My experience in the back end includes
+creating REST APIs, Making routes using Express, setting up Mongo DB and utilizing
+Mongoose Schemas, using Firebase for serverless applications, creating
+S3 databases and virutal machines with AWS.
+`;

@@ -1,0 +1,28 @@
+.icons{
+  display:none;
+  color:#99CC00;
+  width: 40vw;
+}
+.icons, section{
+ float:left;
+}
+.icons .title{
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  margin-left: 0;
+}
+
+.icons .about{
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+  margin-left: 0;
+  height: 100%;
+ 
+}
+
+@media (min-width: 720px){
+.icons{
+
+  display:flex;
+}
+}

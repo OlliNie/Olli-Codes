@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaPhone} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhone, FaEnvelope} from 'react-icons/fa';
 
 
 export const contactInfo = [
@@ -15,6 +15,11 @@ export const contactInfo = [
   {
     icon: <FaLinkedin/>,
     text:'LINKED-IN',
-    link:'https://github.com/SteelFace87'
+    link:'https://www.linkedin.com/in/nieminenolli/'
+  },
+  {
+    icon: <FaEnvelope/>,
+    text:'OTN987@GMAIL.COM',
+
   },
 ]

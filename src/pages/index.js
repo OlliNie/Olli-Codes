@@ -47,10 +47,6 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <Profile data={data}/>
           <MobileDevider title={CONTACT}/>
           <ContactInfo/>
-          {/* <MobileDevider title={FRONT_END}/>
-          <FrontEndStack/>
-          <MobileDevider title={BACK_END}/>
-          <BackEndStack/> */}
           <Stacks/>
           <MobileDevider title={PROJECTS}/>
           <Projects/>
