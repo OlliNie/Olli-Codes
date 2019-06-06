@@ -1,5 +1,5 @@
 export const RELATIVE_EXP =`
-  In addittion to my skills as a FullStack developer, my biggest
+  In addittion to my skills as a Full-Stack developer, my biggest
   asset is my extensive background in Mechanical Engineering along with a lifetime of working with my hands.
   During those years I wore many hats, plese refer to my list of past accomplishemnts
   when considering adding me to your team.
