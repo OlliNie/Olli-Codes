@@ -6,7 +6,7 @@ import { CONTACT } from '../content/titles';
 
 export default function renderContactInfo() {
   return (
-    <section css={{ display: 'flex', marginBottom:'30px' }}>
+    <section css={{ display: 'flex', marginBottom:'30px', width:'100%' }}>
       <Tab title={CONTACT} />
       <section css={{
         display: 'flex',

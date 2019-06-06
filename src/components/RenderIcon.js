@@ -19,7 +19,7 @@ export default function RenderIcon({ iconArray, direction }) {
       </li>
 
     } else if (icon.text && icon.icon) {
-      return <li key={i} css={{ alignSelf: 'center', color: 'white' }}>
+      return <li key={i} css={{ alignSelf: 'center', color: 'white'}}>
         <div css={{ display: 'flex', justifyContent: 'center' }}>
           <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
           <p css={{ alignSelf: 'center', margin: '0' }}>{icon.text}</p>
@@ -27,7 +27,7 @@ export default function RenderIcon({ iconArray, direction }) {
         </div>
       </li>
     }
-    else return <li key={i} css={{ alignSelf: 'center', color: 'white', fontSize: '32px' }}>
+    else return <li key={i} css={{ alignSelf: 'center', color: 'white', fontSize: '32px'}}>
       <div css={{display:'flex'}}>
         <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
       </div>

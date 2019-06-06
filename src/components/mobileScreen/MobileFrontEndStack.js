@@ -24,7 +24,7 @@ export function MobileFrontEndStack() {
       <section className='icons1'>
         <RenderIcon iconArray={frontEndStack} />
       </section>
-      <p>{aboutFrontEnd}</p>
+      <p css={{padding:'30px 20px 0 20px'}}>{aboutFrontEnd}</p>
     </section>
   )
 }
@@ -35,7 +35,7 @@ export function MobileBackEndStack() {
       <section className='icons1'>
         <RenderIcon iconArray={backEndStack} />
       </section>
-      <p>{aboutBackEnd}</p>
+      <p css={{padding:'30px 20px 0 20px'}}>{aboutBackEnd}</p>
     </section>
   )
 }

@@ -8,9 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { UPDATED } from '../content/footer'
-
 import Header from "./header"
+import Footer from './Footer';
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -34,10 +33,9 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer css={{height:'75px', backgroundColor:'#99cc00', display: 'flex', justifyContent:'center', color: 'white'}}>
-            <p css={{alignSelf:'center'}}>{UPDATED}</p>
-          </footer>
+
         </div>
+        <Footer />
       </>
     )}
   />

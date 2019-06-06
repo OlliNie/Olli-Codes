@@ -22,8 +22,8 @@ export function PcFrontEnd() {
     <section className='icons'>
       <section>
         <p className='title'>{FRONT_END}</p>
-        <section>
-          <RenderIcon iconArray={frontEndStack} direction='column' />
+        <section css={{float:'left'}}>
+          <RenderIcon iconArray={frontEndStack} direction='row' />
         </section>
         <p>{aboutFrontEnd}</p>
       </section>
@@ -36,8 +36,8 @@ export function PcBackEnd() {
     <section className='icons'>
       <section>
         <p className='title'>{BACK_END}</p>
-        <section>
-          <RenderIcon iconArray={backEndStack} direction='column' />
+        <section css={{float:'left'}}>
+          <RenderIcon iconArray={backEndStack} direction='row' />
         </section>
         <p>{aboutBackEnd}</p>
       </section>

@@ -6,7 +6,7 @@ import { PROJECTS } from '../content/titles';
 
 export default function Projects() {
   return (
-    <section css={{ display: 'flex', marginBottom:'30px', alignItems:'center' }}>
+    <section css={{ display: 'flex', marginBottom:'30px', alignItems:'center', width:'100%' }}>
       <Tab title={PROJECTS}/>
       <RenderProjects projectArray={projects} />
     </section>

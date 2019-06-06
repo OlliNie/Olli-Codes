@@ -2,13 +2,12 @@
   display:none;
   color:#99CC00;
   width: 40vw;
+  padding:20px;
 }
-.icons, section{
- float:left;
-}
+
 .icons .title{
   font-size: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   margin-left: 0;
 }
 
@@ -17,7 +16,6 @@
   padding-bottom: 2rem;
   margin-left: 0;
   height: 100%;
- 
 }
 
 @media (min-width: 720px){
