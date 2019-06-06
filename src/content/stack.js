@@ -42,9 +42,9 @@ such as React Hooks.
 
 export const aboutBackEnd =`
 I really enjoy working on the BackEnd, especially since Node.js allows
-JavaScript to run on server side code.  My experience in the back end includes
-the following.
-creating REST APIs and routes using Express. Setting up Mongo Databases and utilizing
-Mongoose Schemas. Using Firebase for serverless applications. Hosting servers
-on AWS Elastic Compute Cloud, and sites on AWS Simple Storage Service.
+JavaScript to run on server side code. 
+My experience in the back end includes
+creating REST APIs and routes using Express, Setting up Mongo Databases, utilizing
+Mongoose Schemas, and using Firebase for serverless applications.  I have hosed my projects and
+servers by utilizing Netlify, AWS, and Heroku.
 `;

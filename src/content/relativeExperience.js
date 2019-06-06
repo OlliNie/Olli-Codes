@@ -15,9 +15,9 @@ export const EXP_ARRAY = [
   `Collaborated on a team and increased manufacturing speeds by 250%, reduced startup time by > 90%.`,
 
   `Worked diretly with equiment operators to program automation equipment to cater to their needs.  This
-  included UX/UI design of HMI (Human Machine Interface) panlels and programming PLCs(Programmable Logic Controllers).`,
+  included UX/UI design of HMI (Human Machine Interface) panlels and programming PLCs (Programmable Logic Controllers).`,
 
-  `Trained equipment operators about how to use the machinery that I designed, and created work instructions.`,
+  `Trained equipment operators, and created work instructions.`,
 
   `Designed, programmed, wired, and updated 3 generations of manufacturing lines.`,
 
