@@ -13,7 +13,7 @@ export default function RenderIcon({ iconArray, direction }) {
           <div css={{ display: 'flex', justifyContent: 'center' }}>
             <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
             <p css={{ alignSelf: 'center', margin: '0' }}>{icon.text}</p>
-            <p css={{ alignSelf: 'center', margin: '0 0 0 10px' }}>{icon.icon}</p>
+            {/* <p css={{ alignSelf: 'center', margin: '0 0 0 10px' }}>{icon.icon}</p> */}
           </div>
         </a>
       </li>
@@ -23,7 +23,7 @@ export default function RenderIcon({ iconArray, direction }) {
         <div css={{ display: 'flex', justifyContent: 'center' }}>
           <p css={{ alignSelf: 'center', margin: '0 10px 0 0' }}>{icon.icon}</p>
           <p css={{ alignSelf: 'center', margin: '0' }}>{icon.text}</p>
-          <p css={{ alignSelf: 'center', margin: '0 0 0 10px' }}>{icon.icon}</p>
+          {/* <p css={{ alignSelf: 'center', margin: '0 0 0 10px' }}>{icon.icon}</p> */}
         </div>
       </li>
     }
