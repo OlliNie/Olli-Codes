@@ -6,6 +6,7 @@ import MobileDevider from '../components/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
 import Projects from '../components/Projects';
 import Stacks from '../components/Stacks';
+import PastExperience from '../components/PastExpereince';
 
 
 
@@ -49,7 +50,7 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
           <MobileDevider title={CONTACT}/>
           <ContactInfo/>
           <Stacks/>
-          <MobileDevider title={PROJECTS}/>
+          <PastExperience/>
           <Projects/>
         </Layout>
       )

@@ -1,11 +1,12 @@
 .icons{
   display:none;
-  color:#99CC00;
+  color:white;
   width: 40vw;
   padding:20px;
 }
 
 .icons .title{
+  color:#99CC00;
   font-size: 1.5rem;
   padding-bottom: 1rem;
   margin-left: 0;
