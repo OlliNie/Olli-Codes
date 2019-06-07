@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Olli Nieminen Portfolio`,
+    description: `Portfolio about me and my coding`,
+    author: `Olli Nieminen`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
