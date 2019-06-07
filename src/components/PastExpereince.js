@@ -5,8 +5,8 @@ import MobileDevider from '../components/MobileDevider';
 
 export default function PastExperience() {
 
-  const experienceList = EXP_ARRAY.map(exp => {
-    return <li><p>{exp}</p></li>
+  const experienceList = EXP_ARRAY.map((exp, i) => {
+    return <li key={i}><p>{exp}</p></li>
   })
   return (
     <>

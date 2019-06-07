@@ -60,3 +60,4 @@ smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
 )
 
 export default IndexPage
+
