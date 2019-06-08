@@ -6,6 +6,7 @@ const IndexPage = (props) => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
+      <div style={{height:'75px'}}></div>
       {postList.edges.map(({ node }, i) => (
         <Link to={node.fields.slug} className="link" >
           <div className="post-list">
@@ -19,8 +20,8 @@ const IndexPage = (props) => {
   )
 }
 export default IndexPage;
-export const listQuery = graphql`
-  query ListQuery {
+export const llistQuery = graphql`
+  query LlistQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

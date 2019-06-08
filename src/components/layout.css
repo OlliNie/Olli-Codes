@@ -29,6 +29,7 @@ summary {
 }
 main{
   width:100%;
+  min-height:calc(100vh - 70px);
 }
 audio,
 canvas,
@@ -627,4 +628,7 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+.nav-bar a:hover{
+  color:white;
 }
