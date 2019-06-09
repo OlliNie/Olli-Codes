@@ -11,14 +11,18 @@ class ResumeTemplate extends PureComponent {
 
 
   handleNextPage = () => {
-    this.setState((state) => {
-      return { page: state.page + 1 }
-    })
+    if (this.state.page < 2) {
+      this.setState((state) => {
+        return { page: state.page + 1 }
+      })
+    }
   }
   handlePrevPage = () => {
-    this.setState((state) => {
-      return { page: state.page - 1 }
-    })
+    if (this.state.page > 1) {
+      this.setState((state) => {
+        return { page: state.page - 1 }
+      })
+    }
   }
 
   componentDidMount() {
@@ -68,8 +72,11 @@ class ResumeTemplate extends PureComponent {
             padding: '10px 0 10px 0',
             marginBottom: '15px'
           }}>
-          <button onClick={this.handlePrevPage}>prev page</button>
-          <button onClick={this.handleNextPage}>next page</button>
+
+          <section css={{ display: 'flex', justifyContent: 'space-around', width: '100vw' }}>
+            <button onClick={this.handlePrevPage}>prev page</button>
+            <button onClick={this.handleNextPage}>next page</button>
+          </section>
         </section>
 
         <canvas css={{ width: '100vw' }} id='book-canvas'></canvas>
