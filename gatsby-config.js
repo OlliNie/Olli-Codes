@@ -17,22 +17,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-pdf`,
-    `gatsby-plugin-copy-files`,
+   
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
+        verbose: true,
         path: `${__dirname}/src/data`,
       },
-    
     },
     {
       resolve: "gatsby-plugin-react-svg",
@@ -67,8 +58,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-copy-files',
       options: {
+          source: `${__dirname}/src/public`,
+          destination: ''
+      }
+  },
+  
+  {
+      resolve: 'gatsby-plugin-copy-files',
+      options: {
           source: `${__dirname}/src/data`,
-          destination: `${__dirname}/src/data`
+          destination: '/data'
       }
   }
     // this (optional) plugin enables Progressive Web App + Offline functionality

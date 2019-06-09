@@ -26,7 +26,7 @@ class ResumeTemplate extends PureComponent {
   }
  
   componentDidMount() {
-    const loadingTask = PDFJS.getDocument('/static/Resume-4c81f695276cd1144ea0aa4fbff91ba0.pdf');
+    const loadingTask = PDFJS.getDocument('/data/Resume.pdf');
     loadingTask.promise.then(
       function (pdf) {
         this.pdf = pdf;
