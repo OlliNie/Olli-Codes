@@ -25,12 +25,14 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
     "glamor": "^2.20.40",
+    "pdf.js-extract": "^0.1.1",
     "postcss": "^7.0.16",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-pdf": "^4.0.5",
     "scrollmonitor-react": "^2.4.1"
   },
   "devDependencies": {

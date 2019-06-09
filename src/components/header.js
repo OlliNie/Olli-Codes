@@ -24,9 +24,9 @@ const Header = () => (
       />
     </div>
       <ul className='nav-bar' css={{display:'flex', marginLeft:'auto', alignItems:'center' }}>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/blog'><a>BLOG</a></Link></li>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/'><a>HOME</a></Link></li>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/'><a>RESUME</a></Link></li>
+        <li css={{margin:'0 15px 0 0 '}}><Link to='/blog'>BLOG</Link></li>
+        <li css={{margin:'0 15px 0 0 '}}><Link to='/'>HOME</Link></li>
+        <li css={{margin:'0 15px 0 0 '}}><Link to='/resume'>RESUME</Link></li>
       </ul>
   </header>
 )

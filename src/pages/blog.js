@@ -34,7 +34,7 @@ const IndexPage = () => {
      {
        console.log('node', node)
        return   (
-        <Link to={node.fields.slug} className="link" >
+        <Link key={i} to={node.fields.slug} className="link" >
           <div className="post-list" css={
             {
               border:'2px solid green',
