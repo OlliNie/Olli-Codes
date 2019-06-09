@@ -23,7 +23,15 @@ const Header = () => (
         }}
       />
     </div>
-      <ul className='nav-bar' css={{display:'flex', marginLeft:'auto', alignItems:'center' }}>
+      <ul className='nav-bar' css={
+        {display:'flex',
+         marginLeft:'auto',
+          alignItems:'center',
+          fontSize:'.7rem',
+          '@media (min-width: 720px)': {
+            fontSize: '1.2rem'
+          }
+           }}>
         <li css={{margin:'0 15px 0 0 '}}><Link to='/blog'>BLOG</Link></li>
         <li css={{margin:'0 15px 0 0 '}}><Link to='/'>HOME</Link></li>
         <li css={{margin:'0 15px 0 0 '}}><Link to='/resume'>RESUME</Link></li>
