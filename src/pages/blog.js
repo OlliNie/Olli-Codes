@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { Link, graphql, StaticQuery } from 'gatsby'
-// import './post.css';
+import styles from './blog.module.css'
 import Layout from '../components/layout'
 const IndexPage = () => {
 
-  return<StaticQuery
-  query={graphql`
+  return <StaticQuery
+    query={graphql`
   query ListQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
@@ -23,39 +23,30 @@ const IndexPage = () => {
       }
     }
   }
-  `}render={data=>{
-    console.log('data in blog page', data);
-    const postList = data.allMarkdownRemark;
-    console.log('postList', postList);
-    return (
-      <Layout>
-        <div css={{height:'75px'}}></div>
-        {postList.edges.map(({ node }, i) => 
-     {
-       console.log('node', node)
-       return   (
-        <Link key={i} to={node.fields.slug} className="link" >
-          <div className="post-list" css={
-            {
-              border:'2px solid green',
-              margin:'30px',
-              padding:'10px',
-              borderRadius:'20px'
-
-            }}>
-            <h1>{node.frontmatter.title}</h1>
-            <span>{node.frontmatter.date}</span>
-            <p>{node.excerpt}</p>
-          </div>
-        </Link>
-      )
-     }
-        )}
+  `} render={data => {
+      const postList = data.allMarkdownRemark;
+      return (
+        <Layout>
+          <container>
+            <div className={styles.spacer}></div>
+            {postList.edges.map(({ node }, i) => {
+              return (
+                <Link key={i} to={node.fields.slug} className="link" >
+                  <div className={styles.blogThumbnail}>
+                    <h1>{node.frontmatter.title}</h1>
+                    <span>{node.frontmatter.date}</span>
+                    <p>{node.excerpt}</p>
+                  </div>
+                </Link>
+              )
+            }
+            )}
+          </container>>
       </Layout>
-    )
-  }}
+      )
+    }}
   >
-    </StaticQuery>
+  </StaticQuery>
 }
 
 

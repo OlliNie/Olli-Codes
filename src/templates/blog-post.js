@@ -7,7 +7,7 @@ function BlogPost(props) {
     const { title } = post.frontmatter;
     return (
         <Layout>
-            <div css={{height:'75px'}}></div>
+         
             <div css={{margin:'20px', color:'silver'}}>
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
