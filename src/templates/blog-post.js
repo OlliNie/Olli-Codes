@@ -8,7 +8,7 @@ function BlogPost(props) {
     return (
         <Layout>
          
-            <div css={{margin:'20px', color:'silver'}}>
+            <div css={{color:'silver', padding:'10px'}}>
                 <h1>{title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
