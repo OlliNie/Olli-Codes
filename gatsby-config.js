@@ -13,9 +13,16 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve:'gatsby-plugin-postcss',
+      options:{
+        postCssPlugins: [
+          require('postcss-nested')
+        ]
+      }
+    },
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-postcss`,
     `gatsby-transformer-pdf`,
    
     {

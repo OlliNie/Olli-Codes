@@ -1,40 +1,20 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Logo from '../images/logo.svg';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import style from './header.module.css';
+
 
 
 const Header = () => (
-  <header
-    css={{
-      background: '#99CC00',
-      display: 'flex',
-      flexDirection: 'row',
-      position:'fixed',
-      zIndex: '75',
-      width: '100%',
-    }}
-  >
+  <header className={style.header}>
     <div>
-      <Logo
-        css={{
-          height: '50px',
-          width: '180px'
-        }}
-      />
+      <Logo/>
     </div>
-      <ul className='nav-bar' css={
-        {display:'flex',
-         marginLeft:'auto',
-          alignItems:'center',
-          fontSize:'.7rem',
-          '@media (min-width: 720px)': {
-            fontSize: '1.2rem'
-          }
-           }}>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/blog'>BLOG</Link></li>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/'>HOME</Link></li>
-        <li css={{margin:'0 15px 0 0 '}}><Link to='/resume'>RESUME</Link></li>
+      <ul>
+        <li><Link to='/blog'>BLOG</Link></li>
+        <li><Link to='/'>HOME</Link></li>
+        <li><Link to='/resume'>RESUME</Link></li>
       </ul>
   </header>
 )
@@ -42,7 +22,5 @@ const Header = () => (
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
-
-
 
 export default Header

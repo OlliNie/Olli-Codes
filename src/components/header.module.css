@@ -1,0 +1,29 @@
+
+header{
+  background: #99cc00;
+  display: flex;
+  position:fixed;
+  z-index: 75;
+  width: 100vw;
+  svg{
+    height: 50px;
+    width: 180px;
+  }
+  ul{
+    display:flex;
+    margin-left:auto;
+    align-items:center;
+    font-size:.7rem;
+  }
+  li{
+    margin: 0 15px 0 0;
+  }
+  a{
+    font-size:.8rem
+  }
+}
+@media (min-width: 720px) {
+  header a{
+    font-size:1.2rem;
+  }
+}
