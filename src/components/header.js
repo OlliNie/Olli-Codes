@@ -11,7 +11,7 @@ const Header = () => (
     <div>
       <Logo/>
     </div>
-      <ul>
+      <ul className={style.navOptions}>
         <li><Link to='/blog'>BLOG</Link></li>
         <li><Link to='/'>HOME</Link></li>
         <li><Link to='/resume'>RESUME</Link></li>
