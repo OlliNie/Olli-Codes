@@ -37,7 +37,7 @@ class ResumeTemplate extends PureComponent {
 
   renderPage() {
     this.pdf.getPage(this.state.page).then(function (page) {
-      const scale = 1.25;
+      const scale = 3;
       const viewport = page.getViewport(scale);
 
       // Prepare canvas using PDF page dimensions
@@ -75,6 +75,7 @@ class ResumeTemplate extends PureComponent {
 
           <section css={{ display: 'flex', justifyContent: 'space-around', width: '100vw' }}>
             <button onClick={this.handlePrevPage}>prev page</button>
+            <a href={`/data/Resume.pdf`} download><button>download</button></ a>
             <button onClick={this.handleNextPage}>next page</button>
           </section>
         </section>
