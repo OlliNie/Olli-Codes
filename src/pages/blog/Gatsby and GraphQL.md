@@ -21,4 +21,4 @@ To answer the question of what makes a page component...Gatsby runs some under t
 If a regular component needs information that requires a page query, a page component can pass that information down to the child component as props.  As a side note, you can see that if you are making single page apps, you no longer need to specify routes.  All you need to do is use <Link to='page-component-name'></link> to render a new page component, and the url changes accordingly.  
 
 ## Conclusion
-I really enjoyed the challenge of creating my portfolio site with Gatsby and learning some GraphQL to get the project done.  You can refer to my GitHub Repo for more information on this project.
+I really enjoyed the challenge of creating my portfolio site with Gatsby and learning some GraphQL to get the project done.  You can refer to my source code for this project at https://github.com/SteelFace87/Olli-Codes.
