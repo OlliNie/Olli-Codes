@@ -22,7 +22,9 @@ export default function renderContactInfo() {
         display: 'none',
         '@media (min-width: 720px)': {
           display: 'flex',
-          flexGrow: 1
+          flexGrow: 1,
+          fontSize: '1.5rem',
+          flexWrap: 'wrap'
         }
       }}>
         <RenderIcon iconArray={contactInfo} direction='row' />
