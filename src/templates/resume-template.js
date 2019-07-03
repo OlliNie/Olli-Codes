@@ -80,7 +80,23 @@ class ResumeTemplate extends PureComponent {
           </section>
         </section>
 
-        <canvas css={{ width: '100vw' }} id='book-canvas'></canvas>
+        <canvas css={{ width: '100vw', marginBottom:'7px' }} id='book-canvas'></canvas>
+
+        <section css={
+          {
+            borderBottom: '1px solid #99CC00',
+            borderTop: '1px solid #99CC00',
+            padding: '10px 0 10px 0',
+            marginBottom: '15px'
+          }}>
+
+          <section css={{ display: 'flex', justifyContent: 'space-around', width: '100vw' }}>
+            <button onClick={this.handlePrevPage}>prev page</button>
+            <a href={`/data/Resume.pdf`} download><button>download</button></ a>
+            <button onClick={this.handleNextPage}>next page</button>
+          </section>
+        </section>
+
       </Layout>
     )
   }
