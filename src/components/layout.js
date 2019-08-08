@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from './Footer';
 import "./layout.css"
+import { Helmet } from 'react-helmet';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,6 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{

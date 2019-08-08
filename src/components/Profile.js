@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image'
 import { aboutMe } from '../content/aboutMe';
+import { Helmet } from 'react-helmet';
 // import '../css/mobile.css';
 
 export default function Profile({ data }) {
   return (
     <section className='Profile'>
+     
       <div css={{ height: '54px' }}></div>
       <section className='pcView' css={{
         marginBottom: '30px',
