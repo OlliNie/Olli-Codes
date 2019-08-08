@@ -28,9 +28,7 @@ const IndexPage = () => (
     }
     `
   } render={(data) => {
-    console.log(
-      'data', data.site.siteMetadata
-    )
+
     return (
       
       <Layout>
