@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Olli Nieminen Portfolio`,
-    description: `Olli's portfolio site that includes a blog, resume, background, and projects.`,
+    title: `Olli Nieminen | JavaScript Developer`,
+    description: `Olli Nieminen is a software developer located in Portland Oregon specializing in React and Node.js`,
+    content: 'java script, web development, full stack, back-end, front-end, node, react, seo',
     author: `Olli Nieminen`,
     siteUrl: `https://www.olli.codes`
   },

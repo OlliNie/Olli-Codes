@@ -16,41 +16,30 @@ import { Helmet } from 'react-helmet';
 const IndexPage = () => (
 
   <StaticQuery query={graphql`
-  {
-    faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
-          childImageSharp{
-            fluid(maxWidth:1600){
-              ...GatsbyImageSharpFluid
-            }
-          }
+  query metaData {
+    site{
+        siteMetadata {
+          title
+          description
+          author
+          content
+        }
+      }
     }
-banner: file(relativePath: {eq:"banner.jpg"}){
-  childImageSharp{
-    fluid(maxWidth:1400){
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
-  childImageSharp{
-    fluid(maxWidth:1400){
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-
-  }
     `
   } render={(data) => {
+    console.log(
+      'data', data.site.siteMetadata
+    )
     return (
       
       <Layout>
         <Helmet htmlAttributes={{lang: 'en'}}>
-          <title>Olli Nieminen</title>
-          <meta name="Description" content="Olli's portfolio site that includes a blog, resume, skills, background, and a projects section."></meta>
-         
+          <title>{data.site.siteMetadata.title}</title>
+          <meta name="Description" content={data.site.siteMetadata.description}></meta>
+          <meta name="keywords" content={data.site.siteMetadata.content}></meta>  
         </Helmet>
-        <Profile data={data} />
+        <Profile/>
         <MobileDevider title={CONTACT} />
         <ContactInfo />
         <Stacks />

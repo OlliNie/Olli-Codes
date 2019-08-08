@@ -1,72 +1,98 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image'
 import { aboutMe } from '../content/aboutMe';
-import { Helmet } from 'react-helmet';
-// import '../css/mobile.css';
+import { StaticQuery, graphql } from "gatsby";
 
-export default function Profile({ data }) {
-  return (
-    <section className='Profile'>
-     
-      <div css={{ height: '54px' }}></div>
-      <section className='pcView' css={{
-        marginBottom: '30px',
-        display: 'none',
-        '@media (min-width: 720px)': {
-          display: 'block'
-        }
-      }}>
 
-        <BackgroundImage fluid={data.banner.childImageSharp.fluid}>
-          <div css={{
-            display: 'flex', flexDirection: 'row', justifyContent: 'center'
-          }}>
+export default function Profile() {
+  return <StaticQuery query={graphql`
+  {
+    faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
+          childImageSharp{
+            fluid(maxWidth:1600){
+              ...GatsbyImageSharpFluid
+            }
+          }
+    }
+banner: file(relativePath: {eq:"banner.jpg"}){
+  childImageSharp{
+    fluid(maxWidth:1400){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
+  childImageSharp{
+    fluid(maxWidth:1400){
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
 
-            <Img fluid={data.faceShot.childImageSharp.fluid} css={{
-              width: '600px', height: '290px',
-              alignSelf: 'flex-end', zIndex: '2'
-            }} />
+  }
+  `}
+  render={(data)=>{
 
+    return (
+      <section className='Profile'>
+       
+        <div css={{ height: '54px' }}></div>
+        <section className='pcView' css={{
+          marginBottom: '30px',
+          display: 'none',
+          '@media (min-width: 720px)': {
+            display: 'block'
+          }
+        }}>
+  
+          <BackgroundImage fluid={data.banner.childImageSharp.fluid}>
             <div css={{
-              backgroundColor: '8E8686', width: '100%', alignSelf: 'center', textAlign: 'left', padding: '60px'
+              display: 'flex', flexDirection: 'row', justifyContent: 'center'
             }}>
-
-              <p css={{
-                fontSize: '22px',
-                color: 'white',
-                letterSpacing: '1px'
+  
+              <Img fluid={data.faceShot.childImageSharp.fluid} css={{
+                width: '600px', height: '290px',
+                alignSelf: 'flex-end', zIndex: '2'
+              }} />
+  
+              <div css={{
+                backgroundColor: '8E8686', width: '100%', alignSelf: 'center', textAlign: 'left', padding: '60px'
               }}>
-                {aboutMe}
-              </p>
+  
+                <p css={{
+                  fontSize: '22px',
+                  color: 'white',
+                  letterSpacing: '1px'
+                }}>
+                  {aboutMe}
+                </p>
+              </div>
+  
+  
             </div>
-
-
-          </div>
-        </BackgroundImage>
+          </BackgroundImage>
+        </section>
+        <section className="mobileView" css={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          '@media (min-width: 720px)': {
+            display: 'none'
+          }
+        }}>
+          <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
+            width: '100%', height: 'auto',
+            zIndex: '2'
+          }} />
+          <p css={{
+            padding: '30px 20px 0 20px',
+            color: 'white',   
+          }}>{aboutMe}</p>
+        </section>
       </section>
-      <section className="mobileView" css={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        '@media (min-width: 720px)': {
-          display: 'none'
-        }
-      }}>
-        <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
-          width: '100%', height: 'auto',
-          zIndex: '2'
-        }} />
-        <p css={{
-          padding: '30px 20px 0 20px',
-          color: 'white',   
-        }}>{aboutMe}</p>
-      </section>
-    </section>
-  )
+    )
+  }}/>
 }
 
-Profile.propTypes = {
-  data: PropTypes.object.isRequired
-}
