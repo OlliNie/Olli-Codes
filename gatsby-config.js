@@ -3,8 +3,17 @@ module.exports = {
     title: `Olli Nieminen Portfolio`,
     description: `Olli's portfolio site that includes a blog, resume, background, and projects.`,
     author: `Olli Nieminen`,
+    siteUrl: `https://www.olli.codes`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.olli.codes',
+ 
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
