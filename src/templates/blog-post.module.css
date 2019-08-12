@@ -1,0 +1,13 @@
+.div {
+  color: silver;
+  padding: 10px;
+  code{
+    color: black;
+    background-color: white;
+    margin-right:.2em;
+    padding:1px;
+  }
+  code:after{
+    letter-spacing:-1em;
+  }
+}

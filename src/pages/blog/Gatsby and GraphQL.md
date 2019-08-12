@@ -5,7 +5,11 @@ date: '2019-06-08'
 image: ''
 attachements: '../../data/Resume.pdf'
 ---
-I have been working with React for the past year, and while starting to think about creating my portfolio website, I learned about Gatsby ( React based static site generator powered by GraphQL ).  Learning GraphQL has also been on my to do list, so creating my personal site with Gatsby seemed like the perfect opportunity to learn about both.  This article highlights some key components of GraphQL, and how it is implemented in Gatsby. 
+I have _`working`_ with React for the past year, and while starting to think about creating my portfolio website, I learned about Gatsby ( React based static site generator `powered` by GraphQL ).  Learning GraphQL has also been on my to do list, so creating my personal site with Gatsby seemed like the perfect `opportunity` to learn about both.  This article highlights some key components of GraphQL, and how it is implemented in Gatsby. 
+
+
+
+
 
 ## GraphQL
 Previous to this project the only thing I knew about GraphQL is that by using it one could limit the number of calls when fetching from an API, however it is so much more than that.  

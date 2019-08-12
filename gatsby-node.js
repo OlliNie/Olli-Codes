@@ -1,7 +1,7 @@
 const path = require("path")
 const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 const PDFExtract = require('pdf.js-extract').PDFExtract;
-const pdfExtract = new PDFExtract();
+// const pdfExtract = new PDFExtract();
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions
     return new Promise((resolve, reject) => {
@@ -62,27 +62,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField, createNode } = actions
     if (node.internal.type === `MarkdownRemark`) {
         const slug = createFilePath({ node, getNode, basePath: `pages` });
-      
-       
         createNodeField({
             node,
             name: `slug`,
             value: slug,
         });
-        createNodeField({
-          node,
-          name:'slug2',
-          value:"work/dammit/now."
-        })
+       
     }
-    if(node.internal.mediaType === `application/pdf`){
-
-     createNodeField({
-      node,
-      name: `happiness`,
-      value: `is sweet graphql queries`
-    })
-    
-   
-    }
+ 
 }
