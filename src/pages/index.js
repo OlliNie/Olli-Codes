@@ -42,7 +42,7 @@ const IndexPage = () => (
         <ContactInfo />
         <Stacks />
         <PastExperience />
-        <Projects />
+        {/* <Projects /> */}
       </Layout>
 
     )

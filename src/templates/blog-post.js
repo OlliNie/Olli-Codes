@@ -13,7 +13,7 @@ function BlogPost(props) {
             <p className={styles.description}>{description}</p>
             <div className={styles.div}>
             <Img className={styles.img} fluid={post.frontmatter.image.childImageSharp.fluid} />
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
     )

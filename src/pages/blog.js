@@ -41,7 +41,7 @@ const IndexPage = () => {
               )
             }
             )}
-          </container>>
+          </container>
       </Layout>
       )
     }}
