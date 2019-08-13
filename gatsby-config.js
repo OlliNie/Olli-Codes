@@ -15,7 +15,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [`gatsby-remark-copy-linked-files`]
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -22,6 +22,7 @@
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-remark-copy-linked-files": "^2.1.5",
     "gatsby-remark-design-system": "^2.0.0",
     "gatsby-source-filesystem": "^2.0.38",
     "gatsby-transformer-pdf": "^1.0.17",

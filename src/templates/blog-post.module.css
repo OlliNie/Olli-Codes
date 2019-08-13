@@ -10,4 +10,14 @@
   code:after{
     letter-spacing:-1em;
   }
+  a{
+    color:green;
+  }
+  pre{
+    background-color: grey;
+    code{
+      background-color: inherit
+    }
+  }
+  
 }

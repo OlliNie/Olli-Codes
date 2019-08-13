@@ -1,0 +1,31 @@
+---
+title: "Styled Gatsby Pages Generated from .md Files"
+description: Customizing background color on highlighted text content
+date: '2019-07-12'
+image: 'fishon.jpg'
+attachements: '../../data/Resume.pdf'
+---
+# The Why
+When I created my blog I refered to the article [Programmatically Create Pages From Data](https://www.gatsbyjs.org/tutorial/part-seven/), however I had a hard time adding styling to the pages.  This article dives into `gatsby-transformer-remark` plugin, and how to utilize it to add style to your programatically generated pages such as this blog.
+
+
+# What is the gatsby-transformer-remark plugin?
+`gatsby-transformer-remark` is a parser used to transform your `markdown` files into html.  While this is great, using the parser without any of the additional plugins will leave your website rather boring.  How do we fix this... well that is a great question.  Below I will explain how I utilized the parser and it's plugins in order to add style to my blog. 
+
+
+# Creating Hyperlinks
+By default you cannot create `hyperlinks`.  After doing some research I tried the following in my markdown file 
+``[what_to_display](www.address_of_your_website.com)``,
+ and much to my dissapointemt this did not work.  The reason was that I was not using any of the `gatsby-transformer-remark` plugins. In order for this to work you will need the `gatsby-remark-copy-linked-files` plugin.  In your gatsby-config.js file, add the following
+
+```
+  {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [`gatsby-remark-copy-linked-files`]
+      },
+    },
+```
+
+
+
