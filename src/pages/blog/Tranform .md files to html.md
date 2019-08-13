@@ -63,12 +63,12 @@ There are several ways to build and run your Gatsby project locally.  One is to 
 ```
 npm install -g gatsby-cli
 ```
-When you have the CLI installed run the following commands in the termainl
+When you have the CLI installed run the following commands in the termainal.
 ```
 gatsby build
 gatsby run develop
 ```
-In your terminal you should now get something that looks similar to this
+In your terminal you should now get something that looks similar to this.
 ```
 You can now view gatsby-starter-default in the browser.⠀
 http://localhost:8000/
