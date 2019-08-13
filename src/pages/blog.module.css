@@ -8,7 +8,12 @@
   border-radius: 5px;
   color:silver;
   margin: 0 10px 20px 10px;
+
+
 }
 .blogThumbnail:hover{
   border: 2px solid white;
+}
+.description{
+  padding-top:1em;
 }

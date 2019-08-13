@@ -14,10 +14,10 @@ const IndexPage = () => {
           fields{
             slug
           }
-          excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM Do YYYY")
             title
+            description
           }
         }
       }
@@ -31,11 +31,11 @@ const IndexPage = () => {
             <div className={styles.spacer}></div>
             {postList.edges.map(({ node }, i) => {
               return (
-                <Link key={i} to={node.fields.slug} className="link" >
+                <Link key={i} to={node.fields.slug} >
                   <div className={styles.blogThumbnail}>
                     <h1>{node.frontmatter.title}</h1>
                     <span>{node.frontmatter.date}</span>
-                    <p>{node.excerpt}</p>
+                    <p className={styles.description}> {node.frontmatter.description}</p>
                   </div>
                 </Link>
               )

@@ -6,12 +6,13 @@ import Img from 'gatsby-image';
 function BlogPost(props) {
 
     const post = props.data.markdownRemark;
-    const { title } = post.frontmatter;
-    return (
+    const { title, description } = post.frontmatter;
+    return ( 
         <Layout>
-            <h1 css={{paddingTop:'100px'}}>{title}</h1>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.description}>{description}</p>
             <div className={styles.div}>
-            <Img css={{maxWidth: '60%', margin:'auto'}}fluid={post.frontmatter.image.childImageSharp.fluid} />
+            <Img className={styles.img} fluid={post.frontmatter.image.childImageSharp.fluid} />
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>

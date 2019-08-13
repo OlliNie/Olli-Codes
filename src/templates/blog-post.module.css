@@ -9,15 +9,34 @@
   }
   code:after{
     letter-spacing:-1em;
+    
   }
   a{
     color:green;
   }
   pre{
-    background-color: grey;
+    background-color: black;
+    padding:0;
+    width:100%;
     code{
-      background-color: inherit
+      background-color: inherit;
+      color:white;
     }
   }
-  
+}
+.img{
+  width:100%;
+  @media(min-width: 720px){
+    width:80%;
+    margin: 0 auto 40px auto;
+  }
+}
+.title{
+  padding-top:100px;
+  text-align:center;
+  color:#c0c0c0
+}
+.description{
+  text-align:center;
+  color:#c0c0c0
 }
