@@ -1,6 +1,6 @@
 ---
 title: 'Gatsy Series Part 1'
-description: Using gatsby-transformer-remark and gatsby-source-filesystem plugins to transform md files to html
+description: Using gatsby-transformer-remark and gatsby-source-filesystem plugins to transform .md files to html
 date: '2019-08-12'
 image: 'cacoon.jpg'
 ---
@@ -9,11 +9,10 @@ image: 'cacoon.jpg'
 This post is about transforming markdown files to html, a crucial step in programmatically creating pages with Gatsby.
 
 # Introducing Gatsby Data Layer
-The `data layer` is where all of your data is stored, and later on this data can be accessed using GraphQL.  I like to think of the data layer almost as what the Redux store is to typical React projects.
-In order to place data into the Gatsby `data layer`, plugins are setup in the root file `gatsby-config.js`.  We are going to be creaing a markdown file that is added to the Gatsby `data layer`, and then later on the markdown file is used to create renderable html.
+The `data layer` is where all of your data is stored, and later on this data can be accessed using `GraphQL`.  I like to think of the data layer almost as what the Redux store is to typical React projects.  In order to place data into the Gatsby `data layer`, plugins are setup in the root file `gatsby-config.js`.  We are going to be creaing a markdown file that is added to the Gatsby `data layer`, and then later on the markdown file is used to create renderable html.
 
 #Introducing Source Plugins
-Source plugins are used to add data to the data layer.  Data can come from APIs, documents etc.  We will be using the source plugin `gastsby-source-filesystem` to add the .md file into the data layer, first check if you have installed the plugin as a dependancy.  It can be installed via 
+Source plugins are used to add data to the `data layer`.  Data can come from APIs, documents, etc.  We will be using the source plugin `gastsby-source-filesystem` to add the .md file into the `data layer`, first check if you have installed the plugin as a dependancy.  It can be installed via 
 ```
 npm i gatsby-source-filesystem
 ```
@@ -31,16 +30,14 @@ module.exports{
   ]
 }
 ```
-Under the options object, the path should point to the folder that the the contents of which you want to add to the data layer.  The name can be used to filter results when you get to fetching the data from the data layer.
-
-
+Under the options object, the path should point to the folder that the contents of which you want to add to the `data layer`.  The name can be used to filter results when you get to fetching the data from the `data layer`.
 
 #Introducing Transformer plugins
 In order to transform the .md file to a html file, we will be using the transformer plugin `gatsby-transformer-remark`.  In order to start using this plugin, first it needs to be installed as a dependency, with npm the installation looks like this.
 ```
 npm i gatsby-transformer-remark
 ```
-The second step is to add the plugin to `gatsby-config.js`.  Note that the exmple below is simplified, and your gatsby-config.js file will likely have plenty of additional plugins.
+The second step is to add the plugin to `gatsby-config.js`.  Note that the exmple below is simplified, and your `gatsby-config.js` file will likely have plenty of additional plugins.
 ```
 
 module.exports{
@@ -56,13 +53,13 @@ module.exports{
   ]
 }
 ```
-This plugin will search for all .md files in the data layer and convert them html files.  Note that if the `gatsby-source-file-system` was not used to add the .md file into the data layer, then the plugin will not find the .md file and therefore will not transform it into an html file.
+This plugin will search for all .md files in the `data layer` and convert them html files.  Note that if the `gatsby-source-file-system` was not used to add the .md file into the `data layer`, then the plugin will not find the .md file and therefore will not transform it into an html file.
 
 #Accessing the Data Layer with GraphiQL
 
-`GraphiQL` is an awesome tool which allows you to test GraphQL queries before running them in your code.  Gatsby comes out of the box with `GraphiQL` setup.  Once you build your Gatsby project and run it locally, you will get the option to open up `GraphiQL` and query data from the `data layer`.
+`GraphiQL` is an awesome tool which allows you to test `GraphQL` queries before running them in your code.  Gatsby comes out of the box with `GraphiQL` setup.  Once you build your Gatsby project and run it locally, you will get the option to open up `GraphiQL` and query data from the `data layer`.
 
-There are several ways to build and run your Gatsby project locally.   The first option is to install the `Gatsby CLI` in the terminal. 
+There are several ways to build and run your Gatsby project locally.  One is to install the `Gatsby CLI` in the terminal. 
 ```
 npm install -g gatsby-cli
 ```
@@ -80,7 +77,7 @@ View GraphiQL, an in-browser IDE, to explore your site's data and
 http://localhost:8000/___graphql
 ```
 
-After opening up `GraphiQL`, you can query the data layer for the html as such.  Below you can see the html that was transformed from the .md file used to redner this blog post.
+After opening up `GraphiQL`, you can query the `data layer` for the html as such.  Below you can see the html that was transformed from the .md file used to render this blog post.
 
 ![Awesome image](./query.jpg)
 
