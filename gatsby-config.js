@@ -37,6 +37,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name:'featured-projects',
+        path: `${__dirname}/src/featured-projects`,
+      },
+    },
+
+    {
       resolve:'gatsby-plugin-postcss',
       options:{
         postCssPlugins: [

@@ -8,7 +8,9 @@ const IndexPage = () => {
   return <StaticQuery
     query={graphql`
   query ListQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      filter: {fields: {slug: {regex: "/blog/"}}},
+      sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           fields{
@@ -48,6 +50,5 @@ const IndexPage = () => {
   >
   </StaticQuery>
 }
-
 
 export default IndexPage;

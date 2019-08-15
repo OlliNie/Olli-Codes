@@ -7,7 +7,8 @@ exports.createPages = ({ actions, graphql }) => {
         resolve(graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {fields: {slug: {regex: "/blog/"}}},
+        sort: {  order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
         edges {
@@ -56,8 +57,11 @@ exports.createPages = ({ actions, graphql }) => {
 
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField, createNode } = actions
-    if (node.internal.type === `MarkdownRemark`) {
+
+    const { createNodeField, createNode } = actions;
+    //will only create a slug if the path is for blog
+    if (node.internal.type === `MarkdownRemark` ) {
+        console.log('found node', node);
         const slug = createFilePath({ node, getNode, basePath: `pages` });
         createNodeField({
             node,

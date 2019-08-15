@@ -1,0 +1,20 @@
+.container{
+  display:flex;
+  border:1px solid white;
+  width:42vw;
+  flex-direction:column;
+  color:#C0C0C0;
+  padding:1em;
+  text-align:center;
+}
+.image{
+  margin:auto;
+  width:90%;
+}
+.title{
+  align-self: center;
+  margin-bottom: 18px;
+}
+.testimonialTitle{
+  margin-top:18px;
+}
