@@ -7,7 +7,7 @@ image: 'code_for_pdx.png'
 ---
 
 # Last Contribution
-TypeScript enforced API service geared towards communicating with the back that is operating on a Flask framework.
+TypeScript enforced API service geared towards communicating with a back end that is operating on a Flask framework.
 
 #Currently Working On
 TypeScript enforced React component that renders search results that is utilizing Redux state managment.
