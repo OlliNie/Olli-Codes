@@ -9,7 +9,7 @@ image: 'transform.jpg'
 This article is about exploring the Gatsby data layer.  We will be doing this by transforming a markdown file into renderable html.   This can be very useful for instance when programatically creating pages with Gatsby.
 
 # Introducing Gatsby Data Layer
-The `data layer` is where all of your data is stored, and later on this data can be accessed using `GraphQL`.  I like to think of the data layer almost as what the Redux store is to typical React projects.  In order to place data into the Gatsby `data layer`, plugins are setup in the root file `gatsby-config.js`.  We are going to be creaing a markdown file that is added to the Gatsby `data layer`, and then later on the markdown file is used to create renderable html.
+The `data layer` is where all of your data is stored, and later on this data can be accessed using `GraphQL`.  I like to think of the `data layer` almost as what the Redux store is to typical React projects.  In order to place data into the Gatsby `data layer`, plugins are setup in the root file `gatsby-config.js`.  We are going to be creaing a markdown file that is added to the Gatsby `data layer`, and then later on the markdown file is used to create renderable html.
 
 #Introducing Source Plugins
 Source plugins are used to add data to the `data layer`.  Data can come from APIs, documents, etc.  We will be using the source plugin `gastsby-source-filesystem` to add the .md file into the `data layer`, first check if you have installed the plugin as a dependancy.  It can be installed via 
