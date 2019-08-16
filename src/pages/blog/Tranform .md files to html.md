@@ -79,7 +79,7 @@ http://localhost:8000/___graphql
 
 After opening up `GraphiQL`, you can query the `data layer` for the html as such.  Below you can see the html that was transformed from the .md file used to render this blog post.
 
-![Awesome image](./query.jpg)
+![query response](./query.jpg)
 
 
 
