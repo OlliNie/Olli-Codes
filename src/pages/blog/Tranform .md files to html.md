@@ -5,6 +5,8 @@ date: '2019-08-12'
 image: 'transform.jpg'
 ---
 
+![query response](./transform.jpg)
+
 # About
 This article is about exploring the Gatsby data layer.  We will be doing this by transforming a markdown file into renderable html.   This can be very useful for instance when programatically creating pages with Gatsby.
 
