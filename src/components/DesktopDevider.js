@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MobileDevider({ title }) {
+export default function DesktopDevider({ title }) {
   return (
     <section css={{
       whiteSpace: 'nowrap',
@@ -9,11 +9,8 @@ export default function MobileDevider({ title }) {
       width: '100%',
       flexDirection: 'row',
       color: '#99CC00',
+
      
-      '@media (min-width: 720px)': {
-        display: `none`,
-      },
-      
     }}>
       <div css={
         {
@@ -23,14 +20,14 @@ export default function MobileDevider({ title }) {
           alignSelf: 'center'
         }
       }></div>
-      <div><p css={
+      <div><h2 css={
         {
           fontFamily: 'georgia',
-          fontSize: '20px',
           alignSelf: 'center',
-          margin: '0 0 0 8px'
+          margin: '0 6px 0 8px',
+          fontWeight: 'normal'
         }
-      }>{title}</p></div>
+      }>{title}</h2></div>
       <div css={
         {
           borderBottom: '1px solid #99CC00',

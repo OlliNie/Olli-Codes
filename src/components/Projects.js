@@ -7,10 +7,11 @@ import { PROJECTS } from '../content/titles';
 import MobileDevider from '../components/MobileDevider';
 import Img from 'gatsby-image';
 import styles from './projects.module.css';
+import DesktopDevider from './DesktopDevider';
 
 
 
-export default ()=>{
+export default () => {
   const data = useStaticQuery(graphql`
   query ProjectInfo {
     allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/featured-projects/"}}){
@@ -41,29 +42,40 @@ export default ()=>{
   }
 `)
 
-const projects = data.allMarkdownRemark.edges.map(({node}, i) => {
-  console.log('node66666', node.frontmatter.title);
+  const projects = data.allMarkdownRemark.edges.map(({ node }, i) => {
+    console.log('node66666', node.frontmatter.title);
     return <li key={i}>
-      <section className={styles.container}>
-        <h2 className={styles.title}>{node.frontmatter.title}</h2>
-        <p>{node.frontmatter.description}</p>
-        <Img className={styles.image} fluid={node.frontmatter.image.childImageSharp.fluid}></Img>
-        {node.frontmatter.testimonial? <continer><h3 className={styles.testimonialTitle}>Testimonial</h3><p>{node.frontmatter.testimonial}</p></continer>:null} 
-      </section>
+      <>
+        
+        <section className={styles.project_container}>
+          <h2 className={styles.title}>--{node.frontmatter.title}--</h2>
+          <p>{node.frontmatter.description}</p>
+          <section className={styles.img_text_container} >
+            <Img className={styles.image} fluid={node.frontmatter.image.childImageSharp.fluid}></Img>
+            {node.frontmatter.testimonial ?
+              <container className={styles.text_container}>
+                <p >{node.frontmatter.testimonial}</p>
+              </container> :
+              <container className={styles.text_container}>
+                <div className={styles.text_container} dangerouslySetInnerHTML={{ __html: node.html }} />
+              </container>}
+          </section>
+
+
+
+        </section>
+      </>
     </li>
-});
+  });
 
   return (
-    <>
-     <MobileDevider title={PROJECTS} />
-     <ul>
-       <li>hi</li>
-       {projects}
-     </ul>
-      <section css={{ display: 'flex', marginBottom: '30px', alignItems: 'center', width: '100%' }}>
-        <Tab title={PROJECTS} />
-      
-      </section>
-    </>
+    <section className={styles.projectsContainer}>
+      <DesktopDevider title={'Professional Projects'}/>
+    
+      <ul className={styles.all_projects}>
+        {projects}
+      </ul>
+
+    </section>
   )
 }

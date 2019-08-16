@@ -1,12 +1,13 @@
 ---
-title: 'Volunteer at Code For PDX'
+title: 'Code For PDX'
 description: A project to automate the expungement of qualifying criminal records. This project is done in conjunction with the Metropolitan Public Defender's Office.
 date: '2019-08-12'
 image: 'code_for_pdx.png'
 
 ---
 
+# Last Contribution
+TypeScript enforced API service geared towards communicating with the back that is operating on a Flask framework.
 
-
-# About
-pdx
+#Currently Working On
+TypeScript enforced React component that renders search results that is utilizing Redux state managment.

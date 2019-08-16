@@ -20,7 +20,6 @@ function Tab({ title }) {
         flexDirection: 'column',
         '@media (min-width: 720px)': {
         display: `flex`,
-
         marginLeft: '20px'
         }     
       }

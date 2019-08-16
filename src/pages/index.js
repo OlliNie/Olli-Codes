@@ -42,8 +42,8 @@ const IndexPage = () => (
         <ContactInfo />
         <Stacks />
         <PastExperience />
-        {/* <Projects /> */}
-      </Layout>
+        <Projects />
+      </Layout> 
 
     )
   }} />
