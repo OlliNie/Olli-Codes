@@ -28,7 +28,7 @@ export default function MobileDevider({ title }) {
           fontFamily: 'georgia',
           fontSize: '20px',
           alignSelf: 'center',
-          margin: '0 0 0 8px'
+          margin: '0 8px 0 8px'
         }
       }>{title}</p></div>
       <div css={

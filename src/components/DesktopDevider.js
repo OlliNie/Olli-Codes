@@ -25,7 +25,9 @@ export default function DesktopDevider({ title }) {
           fontFamily: 'georgia',
           alignSelf: 'center',
           margin: '0 6px 0 8px',
-          fontWeight: 'normal'
+          fontWeight: 'normal',
+          fontSize: '20px'
+          
         }
       }>{title}</h2></div>
       <div css={
