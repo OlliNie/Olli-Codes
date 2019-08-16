@@ -24,7 +24,10 @@ export default () => {
             image {
               id
               childImageSharp {
-                fluid(maxWidth: 786) {
+                resize(width: 600, height: 350){
+                  src
+                }
+                fluid(maxHeight: 700) {
                   ...GatsbyImageSharpFluid
                 }
               }
