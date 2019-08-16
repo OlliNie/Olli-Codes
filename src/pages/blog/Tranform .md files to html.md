@@ -1,6 +1,6 @@
 ---
 title: 'Gatsy Series Part 1'
-description: Using gatsby-transformer-remark and gatsby-source-filesystem plugins to transform .md files to html
+description: Using Gatsby to transform markdown files to html
 date: '2019-08-12'
 image: 'cacoon.jpg'
 ---
@@ -32,7 +32,7 @@ module.exports{
 ```
 Under the options object, the path should point to the folder that the contents of which you want to add to the `data layer`.  The name can be used to filter results when you get to fetching the data from the `data layer`.
 
-#Introducing Transformer plugins
+#Introducing Transformer Plugins
 In order to transform the .md file to a html file, we will be using the transformer plugin `gatsby-transformer-remark`.  In order to start using this plugin, first it needs to be installed as a dependency, with npm the installation looks like this.
 ```
 npm i gatsby-transformer-remark
