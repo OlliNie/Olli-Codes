@@ -5,7 +5,7 @@ date: '2019-08-12'
 image: 'transform.jpg'
 ---
 
-![query response](./transform.jpg)
+![introduction image, hand turning gears](./transform.jpg)
 
 # About
 This article is about exploring the Gatsby data layer.  We will be doing this by transforming a markdown file into renderable html.   This can be very useful for instance when programatically creating pages with Gatsby.
@@ -39,7 +39,7 @@ In order to transform the .md file to a html file, we will be using the transfor
 ```
 npm i gatsby-transformer-remark
 ```
-The second step is to add the plugin to `gatsby-config.js`.  Note that the exmple below is simplified, and your `gatsby-config.js` file will likely have plenty of additional plugins.
+The second step is to add the plugin to `gatsby-config.js`.  Note that the example below is simplified, and your `gatsby-config.js` file may have additional plugins.
 ```
 
 module.exports{
