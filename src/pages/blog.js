@@ -4,7 +4,6 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import styles from './blog.module.css'
 import Layout from '../components/layout'
 const IndexPage = () => {
-
   return <StaticQuery
     query={graphql`
   query ListQuery {
