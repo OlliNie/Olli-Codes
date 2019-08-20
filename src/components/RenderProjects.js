@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function renderProjects({ projectArray }) {
-  console.log('array', projectArray);
+
   const projects = projectArray.map((project, i) => {
     return <li key={i}>
       <section>

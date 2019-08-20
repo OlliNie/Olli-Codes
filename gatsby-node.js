@@ -61,7 +61,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField, createNode } = actions;
     //will only create a slug if the path is for blog
     if (node.internal.type === `MarkdownRemark` ) {
-        console.log('found node', node);
         const slug = createFilePath({ node, getNode, basePath: `pages` });
         createNodeField({
             node,

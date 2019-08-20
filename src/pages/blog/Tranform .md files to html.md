@@ -68,7 +68,7 @@ npm install -g gatsby-cli
 When you have the CLI installed run the following commands in the termainal.
 ```
 gatsby build
-gatsby run develop
+gatsby develop
 ```
 In your terminal you should now get something that looks similar to this.
 ```

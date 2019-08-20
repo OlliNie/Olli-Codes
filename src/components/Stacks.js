@@ -5,7 +5,7 @@ import PcStack from './destkopScreen/PcStack';
 import MobileStacks from './mobileScreen/MobileFrontEndStack';
 
 export default function Stacks() {
-  console.log('stack', STACK);
+
   return (
     <section css={{ display: 'flex', marginBottom: '30px', width:'100%' }}>
       <Tab title={STACK} />

@@ -4,7 +4,7 @@ import React from 'react';
 
 
 export default function RenderIcon({ iconArray, direction }) {
-  console.log('direction in render icon', direction);
+
   
   const iconList = iconArray.map((icon, i) => {
     if (icon.link && icon.text && icon.icon) {

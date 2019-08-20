@@ -1,1 +1,0 @@
-export const UPDATED = `UPDATED: 8/13/2019`; 
