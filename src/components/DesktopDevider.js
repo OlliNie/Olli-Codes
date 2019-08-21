@@ -9,8 +9,6 @@ export default function DesktopDevider({ title }) {
       width: '100%',
       flexDirection: 'row',
       color: '#99CC00',
-
-     
     }}>
       <div css={
         {

@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby'
 import styles from './blog-post.module.css'
-import Img from 'gatsby-image';
+
 function BlogPost(props) {
 
     const post = props.data.markdownRemark;
