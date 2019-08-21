@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Link, graphql, StaticQuery } from 'gatsby'
 import styles from './blog.module.css'
 import Layout from '../components/layout'
@@ -8,7 +9,7 @@ const IndexPage = () => {
   query ListQuery {
     allMarkdownRemark(
       filter: {fields: {slug: {regex: "/blog/"}}},
-      sort: { order: ASC, fields: [frontmatter___date] }) {
+      sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           fields{
