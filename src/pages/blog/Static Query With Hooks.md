@@ -15,7 +15,7 @@ I am particularly excited about this article since I have been recently using Re
 This article assumes that you allready have a running Gatsby project.  If you do not have one, a good place to get started is at [getting started](https://www.gatsbyjs.org/docs/).
 
 # Introducing Gatsby Queries
-In order to access the data within Gatsby's data layer, you need to use queries.  Gatsby provides two different types of queries which are `Static Queries`, and `Page Queries`.  The main difference between the two is that `Page Queries` can only be used with pages, and `Static Queries` can be used with all components.  For a more in depth article on the difference between them go to [Static Queries Vs. Page Queries](https://www.gatsbyjs.org/docs/static-vs-normal-queries/).  Since in this article we will be using a query to fetch the date a website was last updated and displaying that data in the footer(not a page), we will be using the static query.
+In order to access the data within Gatsby's data layer, you need to use queries.  Gatsby provides two different types of queries which are `static queries`, and `page queries`.  The main difference between the two is that `page queries` can only be used with pages, and `static queries` can be used with all components.  For a more in depth article on the difference between them go to [Static Queries Vs. Page Queries](https://www.gatsbyjs.org/docs/static-vs-normal-queries/).  Since in this article we will be using a query to fetch the date a website was last updated and displaying that data in the footer(not a page), we will be using the static query `useStaticQuery`.
 
 # Static Queries With Hooks
 Before we start implementing queries in our component, lets run the Gatsby project on local host and explore the data layer with QraphiQL.  In the terminal type 
@@ -32,13 +32,13 @@ View GraphiQL, an in-browser IDE, to explore your site's data and schema
 
 http://localhost:8001/___graphql
 ```
-It turns out that Gatsby out of the box logs the time and date a node (fancy Gatsby lingo for component) has changed.  We will be using the Explorer in GraphiQL to create our query to get this information.  
+It turns out that Gatsby out of the box logs the time and date a node (fancy Gatsby word for component) has changed.  We will be using the Explorer in GraphiQL to create our query to get this information.  
 
 After some digging with Explorer I found the path to the changeTime that I was looking for.
 
 ![query](./changeTime.png)
 
-The only problem with this query is that it returns the change time of all nodes in my Gatsby project and in no particular order.  How do we fix this?  Gatsby was nice enough when they created their QraphQL schema that they added an option to sort and limit the number of results.  So after a little more digging around in the Explorer I was able to limit the number of results of our query to 1, and sort the results in a decending order by modified time.
+The only problem with this query is that it returns the changeTime of all nodes in my Gatsby project and in no particular order.  How do we fix this?  Gatsby was nice enough when they created their QraphQL schema that they added an option to sort and limit the number of results.  So after a little more digging around in the Explorer I was able to limit the number of results of our query to 1, and sort the results in a decending order by modifiedTime.
 
 ![sorted query with a limit of 1](./sorted.png)
 
@@ -46,12 +46,12 @@ Now that we have developed our query in QraphiQL, lets go and implement it in ou
 
 ![Footer component with static query](./footer.png)
 
-Referring to the code above, in order to use the fancy `useStaticQuery` hook, you must first import a couple of items.
+Referring to the code above, in order to use the `useStaticQuery` hook, you must first import a couple of items.
 ```
 import { useStaticQuery, graphql } from "gatsby"
 ```
 
-The result of the query is now assigned to the constant `queryResult`, and everything in the orange color is the query that we developed with GraphiQL.  From here on out I just assign the date fetched from the query to the constant `slicedTime`, and slice off the time following the date since I'm not interested in it.  
+The result of the query is now assigned to the constant `queryResult`, and everything in the orange color is the query that we developed with GraphiQL.  From here on out I just assign the date with the time sliced off and assigned it to the variable slicedDate.
 
 #Conclusion
 My first reaction to using the `useStaticQuery` hook to fetch data from the data layer is that it is a bit cleaner and easier to read than the old way.  If you are curious to what the old way `StaticQuery` looked like, check out this link [StaticQuery](https://www.gatsbyjs.org/docs/static-query/).
