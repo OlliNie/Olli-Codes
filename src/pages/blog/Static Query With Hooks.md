@@ -7,12 +7,12 @@ image: 'hook.jpg'
 ![introduction image, hook](./hook.jpg)
 
 # About
-Gatsby Series Part 1 was all about the Gatsby data layer, and this article is all about using static queries to fetch that data.  If you need a refersher on the Gatsby data layer you can find it @ [Data Layer Refresher](https://www.olli.codes/blog/Tranform%20.md%20files%20to%20html/).
+Gatsby Series Part 1 was all about the Gatsby data layer, and this article is all about using static queries to fetch that data.  If you need a refresher on the Gatsby data layer you can find it @ [Data Layer Refresher](https://www.olli.codes/blog/Tranform%20.md%20files%20to%20html/).
 
-I am particularly excited about this article since I have been recently using React Hooks, and now Gatsby V2.1.0 has introduded `useStaticQuery` which allows the use of a React Hook to query with GraphQL.
+I am particularly excited about this article since I have been recently using React Hooks, and now Gatsby V2.1.0 has introduced `useStaticQuery` which allows the use of a React Hook to query with GraphQL.
 
 # Note
-This article assumes that you allready have a running Gatsby project.  If you do not have one, a good place to get started is at [getting started](https://www.gatsbyjs.org/docs/).
+This article assumes that you all ready have a running Gatsby project.  If you do not have one, a good place to get started is at [getting started](https://www.gatsbyjs.org/docs/).
 
 # Introducing Gatsby Queries
 In order to access the data within Gatsby's data layer, you need to use queries.  Gatsby provides two different types of queries which are `static queries`, and `page queries`.  The main difference between the two is that `page queries` can only be used with pages, and `static queries` can be used with all components.  For a more in depth article on the difference between them go to [Static Queries Vs. Page Queries](https://www.gatsbyjs.org/docs/static-vs-normal-queries/).  Since in this article we will be using a query to fetch the date a website was last updated and displaying that data in the footer(not a page), we will be using the static query `useStaticQuery`.
@@ -38,7 +38,7 @@ After some digging with Explorer I found the path to the changeTime that I was l
 
 ![query](./changeTime.png)
 
-The only problem with this query is that it returns the changeTime of all nodes in my Gatsby project and in no particular order.  How do we fix this?  Gatsby was nice enough when they created their QraphQL schema that they added an option to sort and limit the number of results.  So after a little more digging around in the Explorer I was able to limit the number of results of our query to 1, and sort the results in a decending order by modifiedTime.
+The only problem with this query is that it returns the changeTime of all nodes in my Gatsby project and in no particular order.  How do we fix this?  Gatsby was nice enough when they created their QraphQL schema that they added an option to sort and limit the number of results.  So after a little more digging around in the Explorer I was able to limit the number of results of our query to 1, and sort the results in a descending order by modifiedTime.
 
 ![sorted query with a limit of 1](./sorted.png)
 

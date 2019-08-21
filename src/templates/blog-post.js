@@ -5,17 +5,19 @@ import styles from './blog-post.module.css'
 
 function BlogPost(props) {
 
-    const post = props.data.markdownRemark;
-    const { title, description } = post.frontmatter;
-    return ( 
-        <Layout>
-            <h1 className={styles.title}>{title}</h1>
-            <p className={styles.description}>{description}</p>
-            <div className={styles.div}>
-            <div className={styles.mdHtml} dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
-        </Layout>
-    )
+  const post = props.data.markdownRemark;
+  const { title, description } = post.frontmatter;
+  return (
+    <Layout>
+      <section className={styles.layout}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.div}>
+          <div className={styles.mdHtml} dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+      </section>
+    </Layout>
+  )
 }
 export default BlogPost;
 export const query = graphql`
