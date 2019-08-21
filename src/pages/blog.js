@@ -9,7 +9,7 @@ const IndexPage = () => {
   query ListQuery {
     allMarkdownRemark(
       filter: {fields: {slug: {regex: "/blog/"}}},
-      sort: { order: DESC, fields: [frontmatter___date] }) {
+      sort: { order: ASC, fields: [frontmatter___date] }) {
       edges {
         node {
           fields{
