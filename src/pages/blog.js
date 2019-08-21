@@ -6,24 +6,23 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return <StaticQuery
     query={graphql`
-  query ListQuery {
-    allMarkdownRemark(
-      filter: {fields: {slug: {regex: "/blog/"}}},
-      sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          fields{
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM Do YYYY")
-            title
-            description
+    query ListQuery {
+      allMarkdownRemark(filter: {fields: {slug: {regex: "/blog/"}}}, sort: {order: ASC, fields: [frontmatter___date]}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM Do YYYY")
+              title
+              description
+            }
           }
         }
       }
     }
-  }
+    
   `} render={data => {
       const postList = data.allMarkdownRemark;
       return (
