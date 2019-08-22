@@ -21,6 +21,7 @@ export default () => {
             description
             date
             testimonial
+            github
             image {
               id
               childImageSharp {
@@ -53,6 +54,10 @@ export default () => {
               <container className={styles.text_container}>
                 <div className={styles.text_container} dangerouslySetInnerHTML={{ __html: node.html }} />
               </container>}
+          </section>
+          <section className={styles.links}>
+              <a href={node.frontmatter.github}>Github</a>
+              <a>LiveSite</a>
           </section>
         </section>
     </li>
