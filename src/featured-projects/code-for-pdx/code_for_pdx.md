@@ -4,6 +4,7 @@ description: A project to automate the expungement of qualifying criminal record
 date: '2019-08-12'
 image: 'code_for_pdx.png'
 github: 'https://github.com/codeforpdx/recordexpungPDX'
+url: 'none'
 
 ---
 
