@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout";
 import Profile from '../components/Profile';
 import MobileDevider from '../components/section-deviders/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
-import Projects from '../components/Projects';
+import Projects from '../components/projects/Projects';
 import Stacks from '../components/stacks/Stacks';
 import PastExperience from '../components/PastExpereince';
 import { CONTACT, PROJECTS } from '../content/titles';
