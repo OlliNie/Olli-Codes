@@ -1,6 +1,6 @@
 import React from 'react';
-import { STACK } from '../../content/titles';
-import Tab from '../section-deviders/Tab';
+import { STACK } from '../../../content/titles';
+import Tab from '../../section-deviders/Tab';
 import PcStack from './PcStack';
 import MobileStacks from './MobileFrontEndStack';
 

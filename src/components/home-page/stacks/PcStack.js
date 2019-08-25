@@ -1,8 +1,8 @@
 import React from 'react';
 import './pcStack.css'
-import RenderIcon from '../render-icon/RenderIcon';
-import { frontEndStack, backEndStack, aboutFrontEnd, aboutBackEnd } from '../../content/stack';
-import { FRONT_END, BACK_END } from '../../content/titles'
+import RenderIcon from '../../render-icon/RenderIcon';
+import { frontEndStack, backEndStack, aboutFrontEnd, aboutBackEnd } from '../../../content/stack';
+import { FRONT_END, BACK_END } from '../../../content/titles'
 
 
 
