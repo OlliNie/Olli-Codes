@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import styles from './projects.module.css';
 import DesktopDevider from './DesktopDevider';
 
-
 export default () => {
   const data = useStaticQuery(graphql`
   query ProjectInfo {
