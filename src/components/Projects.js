@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import styles from './projects.module.css';
-import DesktopDevider from './DesktopDevider';
+import DesktopDevider from './section-deviders/DesktopDevider';
 
 export default () => {
   const data = useStaticQuery(graphql`

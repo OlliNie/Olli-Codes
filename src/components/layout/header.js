@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import Logo from '../images/logo.svg';
+import Logo from '../../images/logo.svg';
 import { Link } from 'gatsby';
 import style from './header.module.css';
 

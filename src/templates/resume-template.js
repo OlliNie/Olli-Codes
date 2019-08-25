@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import Layout from '../components/layout';
-import { graphql } from 'gatsby';
+import Layout from '../components/layout/layout';
 import PDFJS from 'pdfjs-dist';
 
 class ResumeTemplate extends PureComponent {
