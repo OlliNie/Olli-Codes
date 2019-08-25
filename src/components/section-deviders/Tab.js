@@ -4,7 +4,7 @@ import './tab.css';
 import { Watch } from 'scrollmonitor-react';
 import PropTypes from 'prop-types';
 import TabIndicator from '../../images/bracket.svg';
-import Style from '../../dynamic-style/Style'
+import Style from './Style'
 
 
 function Tab({ title }) {

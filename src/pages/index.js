@@ -5,7 +5,7 @@ import Profile from '../components/Profile';
 import MobileDevider from '../components/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
 import Projects from '../components/Projects';
-import Stacks from '../components/Stacks';
+import Stacks from '../components/stacks/Stacks';
 import PastExperience from '../components/PastExpereince';
 import { CONTACT, PROJECTS } from '../content/titles';
 import SEO from '../components/seo';
