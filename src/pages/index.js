@@ -2,7 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Profile from '../components/Profile';
-import MobileDevider from '../components/MobileDevider';
+import MobileDevider from '../components/section-deviders/MobileDevider';
 import ContactInfo from '../components/ContactInfo';
 import Projects from '../components/Projects';
 import Stacks from '../components/stacks/Stacks';

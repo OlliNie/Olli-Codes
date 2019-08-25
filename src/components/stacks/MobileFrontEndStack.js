@@ -2,7 +2,7 @@ import React from 'react';
 import { frontEndStack, backEndStack } from '../../content/stack';
 import RenderIcon from '../RenderIcon';
 import './mobileFrontEndStack.css';
-import MobileDevider from '../MobileDevider';
+import MobileDevider from '../section-deviders/MobileDevider';
 import { FRONT_END, BACK_END } from '../../content/titles';
 import {aboutFrontEnd, aboutBackEnd } from '../../content/stack';
 
