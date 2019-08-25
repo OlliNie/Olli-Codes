@@ -1,6 +1,6 @@
 import React from 'react';
 import { frontEndStack, backEndStack } from '../../content/stack';
-import RenderIcon from '../RenderIcon';
+import RenderIcon from '../render-icon/RenderIcon';
 import './mobileFrontEndStack.css';
 import MobileDevider from '../section-deviders/MobileDevider';
 import { FRONT_END, BACK_END } from '../../content/titles';

@@ -1,5 +1,5 @@
 import React from 'react';
-import RenderIcon from './RenderIcon';
+import RenderIcon from './render-icon/RenderIcon';
 import { contactInfo } from '../content/contact';
 import Tab from './section-deviders/Tab';
 import { CONTACT } from '../content/titles';
