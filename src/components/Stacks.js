@@ -1,7 +1,7 @@
 import React from 'react';
 import { STACK } from '../content/titles';
-import Tab from './Tab';
-import PcStack from './destkopScreen/PcStack';
+import Tab from './section-deviders/Tab';
+import PcStack from './desktopScreen/PcStack';
 import MobileStacks from './mobileScreen/MobileFrontEndStack';
 
 export default function Stacks() {

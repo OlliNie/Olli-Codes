@@ -1,7 +1,7 @@
 import React from 'react';
 import RenderIcon from './RenderIcon';
 import { contactInfo } from '../content/contact';
-import Tab from './Tab';
+import Tab from './section-deviders/Tab';
 import { CONTACT } from '../content/titles';
 
 export default function renderContactInfo() {

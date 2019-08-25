@@ -1,6 +1,6 @@
 import React from 'react';
 import { RELATIVE_EXP, EXP_ARRAY } from '../content/relativeExperience';
-import Tab from './Tab';
+import Tab from './section-deviders/Tab';
 import MobileDevider from '../components/MobileDevider';
 
 export default function PastExperience() {
