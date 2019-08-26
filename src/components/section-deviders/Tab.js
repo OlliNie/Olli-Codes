@@ -1,15 +1,14 @@
 import React from 'react';
 import 'aos/dist/aos.css'
-import './tab.css';
 import { Watch } from 'scrollmonitor-react';
 import PropTypes from 'prop-types';
 import TabIndicator from '../../images/bracket.svg';
 import Style from './Style'
-
+import styles from './tab.module.css';
 
 function Tab({ title }) {
   return (
-    <div className='tab' css={
+    <div className={styles.main} css={
       {
         width: '100px',
         writingMode: 'vertical-rl',

@@ -1,0 +1,48 @@
+.main{
+  padding-top: 54px;
+  color:#99CC00;
+  background-color: black;
+}
+.desktop_view{
+  margin-bottom: 30px;
+  display: none;
+  @media (min-width: 720px){
+    display: block;
+  }
+}
+.desktop_view_main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.img_headshot{
+  width: 600px;
+  height: 290px;
+  align-self: flex-end;
+  z-index: 2;
+}
+.container_text{
+  background-color: 8E8686;
+  width: 100%;
+  align-self: center;
+  text-align: left;
+  padding: 60px;
+}
+
+.mobile_view{
+  .img{
+    width:100%;
+    height: auto;
+    z-index: 2;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 720px){
+    display: none;
+  }
+}
+.mobile_container_text{
+  padding:18px;
+}

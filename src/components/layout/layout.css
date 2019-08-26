@@ -12,7 +12,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2B2A2F;
+  background-color: black;
   position: absolute;
   top: 0;
   width:100%;
@@ -222,7 +222,7 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 img {
-  max-width: 100%;
+
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
