@@ -1,14 +1,15 @@
-.li{
-  align-self: center;
-  margin: 18px;
-  font-size: 32px;
-}
+
 .ul{
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
   flex-wrap: wrap;
+  li{
+    align-self: center;
+    margin: 18px;
+    font-size: 32px;
+  }
 }
 .icon_with_content{
   display:flex;
