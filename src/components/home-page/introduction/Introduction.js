@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img from 'gatsby-image'
 import styles from './introduction.module.css'
 import { useStaticQuery, graphql } from "gatsby"
 import { aboutMe, title } from '../../../content/aboutMe'
-import { desktopContactIcons, contactInfo } from '../../../content/contact'
+import { desktopContactIcons, contactMe } from '../../../content/contact'
 import RenderIcon from '../../render-icon/RenderIcon'
+import { FaEnvelope } from 'react-icons/fa';
+
 
 export default function headShotWithText(){
+  const [navState, setNavState] = useState(
+    {
+      display:'about_me'
+    }
+  );
+  const updateClick = ()=>{
+    const textToDisplay = ()=> navState.display === 'about_me' ? 'contact' : 'about_me';
+    setNavState({ display: textToDisplay()});
+  };
+
+
+  const iconsWithToggleText = [...desktopContactIcons, {
+    icon: <FaEnvelope/>,
+    function: updateClick
+  }]
+
   const images  = useStaticQuery(graphql`
   {
     faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
@@ -27,15 +45,14 @@ export default function headShotWithText(){
         <Img fluid={images.faceShot.childImageSharp.fluid} className={styles.img_headshot} />
       </div>
         <section className={styles.container_text}>
-          <h3 className={styles.desktop_title}>{title}</h3>
+          {navState.display === 'about_me' ? <h3 className={styles.desktop_title}>{title}</h3> : <h3 className={styles.desktop_title}>{contactMe.title}</h3>}
           <section className={styles.mobile_contact}>
-          <RenderIcon iconArray={desktopContactIcons} direction='row' color='#99CC00'/>
+          <RenderIcon iconArray={iconsWithToggleText} direction='row' color='#99CC00'/>
           </section>
-
-          <p>{aboutMe}</p>
+          {navState.display === 'about_me' ? <p>{aboutMe}</p> : <p>{contactMe.content}</p>}
         </section>
       <section className={styles.desktop_contact}>
-        <RenderIcon iconArray={desktopContactIcons} direction='column' color='#99CC00'/>
+        <RenderIcon iconArray={iconsWithToggleText} direction='column' color='#99CC00'/>
       </section>
     </section>
   )

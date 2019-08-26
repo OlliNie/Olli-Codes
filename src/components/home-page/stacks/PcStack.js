@@ -1,5 +1,5 @@
 import React from 'react';
-import './pcStack.css'
+import styles from './pcStack.module.css'
 import RenderIcon from '../../render-icon/RenderIcon';
 import { frontEndStack, backEndStack, aboutFrontEnd, aboutBackEnd } from '../../../content/stack';
 import { FRONT_END, BACK_END } from '../../../content/titles'
@@ -9,19 +9,19 @@ import { FRONT_END, BACK_END } from '../../../content/titles'
 
 export default function PcStacks() {
   return (
-    <>
+    <section className={styles.main}>
       <PcFrontEnd />
       <PcBackEnd />
-    </>
+    </section>
   )
 }
 
 
 export function PcFrontEnd() {
   return (
-    <section className='icons'>
+    <section>
       <section>
-        <p className='title'>{FRONT_END}</p>
+        <p>{FRONT_END}</p>
         <section css={{float:'left'}}>
           <RenderIcon iconArray={frontEndStack} direction='row' />
         </section>
@@ -33,9 +33,9 @@ export function PcFrontEnd() {
 
 export function PcBackEnd() {
   return (
-    <section className='icons'>
+    <section>
       <section>
-        <p className='title'>{BACK_END}</p>
+        <p>{BACK_END}</p>
         <section css={{float:'left'}}>
           <RenderIcon iconArray={backEndStack} direction='row' />
         </section>

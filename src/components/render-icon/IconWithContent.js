@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './iconWithContent.module.css'
 
 export default ({ icon, text = null, link = null, func=null }) => {
-  console.log('function', func);
   const content =
     <div className={styles.icon_with_content}>
       <p>{icon}</p>
@@ -11,10 +10,10 @@ export default ({ icon, text = null, link = null, func=null }) => {
 
   const allContent = ()=>{
     if(link && func === null){
-     return <a href={link}>{content}</a> 
+     return <a href={link} target='_blank'>{content}</a> 
     }
     else if(func && link === null){
-      return <section onClick={func}>{content}</section>
+      return <section css={{cursor:'pointer'}} onClick={func}>{content}</section>
     }
     else{
       return content

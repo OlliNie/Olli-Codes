@@ -1,0 +1,35 @@
+.main{
+  width:calc(50% + 100px);
+  border:1px solid white;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.x_axis{
+  position:relative;
+  border:1px solid red;
+  width: calc(100% - 200px);
+}
+.text_container{
+  height:500px;
+  border:1px solid purple;
+  top:-250px;
+  position:absolute;
+  padding-left:18px;
+  padding-right:50px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+.bubble{
+  position:relative;
+  height:200px;
+  width:200px;
+  border:1px solid #99cc00;
+  border-radius:100%;
+}
+.leader{
+  
+}

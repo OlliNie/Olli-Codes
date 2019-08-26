@@ -1,6 +1,9 @@
 .main{
   padding-top: 54px;
   display:block;
+  a{
+    cursor:pointer;
+  }
   @media(min-width: 720px){
     display:flex;
     border-bottom: solid 1px #99CC00;
@@ -63,8 +66,9 @@ color:#99cc00;
   }
 }
 .desktop_contact{
- margin:18px;
+ margin:18px 18px 18px auto;
  display:flex;
+
  @media(max-width: 720px){
    display:none;
  }

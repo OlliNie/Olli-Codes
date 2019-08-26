@@ -31,9 +31,12 @@ export const desktopContactIcons = [
   {
     icon: <FaLinkedin/>,
     link:'https://www.linkedin.com/in/nieminenolli/'
-  },
-  {
-    icon: <FaEnvelope/>,
-    function: ()=>{console.log('you clicked me!')}
   }
 ];
+
+export const contactMe = {
+  title: `Let's Chat!`,
+  content: `The best way to get in touch with me is through LinkedIn,
+  if you prefer email, please send me a message at otn987@gmail.com.`
+
+}

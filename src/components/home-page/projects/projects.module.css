@@ -11,7 +11,7 @@
 
   width:100%;
   flex-direction:column;
-  color:white;
+
   @media (min-width:720px){
     width:90%;
     padding:0 1em 0 1em;
@@ -57,7 +57,7 @@
     font-size: 20px;
     font-weight: normal;
     margin:0 0 18px;
-    color: white;
+    color: #99cc00;
   }
   @media(min-width:720px){
     flex-direction:row;

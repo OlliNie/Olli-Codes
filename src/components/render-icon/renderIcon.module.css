@@ -7,8 +7,11 @@
   flex-wrap: wrap;
   li{
     align-self: center;
-    margin: 18px;
+ 
     font-size: 32px;
+  }
+  p{
+    margin:0;
   }
 }
 .icon_with_content{
