@@ -33,6 +33,7 @@ export const desktopContactIcons = [
     link:'https://www.linkedin.com/in/nieminenolli/'
   },
   {
-    icon: <FaEnvelope/>
+    icon: <FaEnvelope/>,
+    function: ()=>{console.log('you clicked me!')}
   }
 ];

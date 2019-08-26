@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './iconWithContent.module.css'
 
 export default ({ icon, text = null, link = null, func=null }) => {
+  console.log('function', func);
   const content =
     <div className={styles.icon_with_content}>
       <p>{icon}</p>
