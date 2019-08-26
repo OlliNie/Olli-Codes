@@ -37,8 +37,6 @@ const IndexPage = () => (
           <meta name="keywords" content={data.site.siteMetadata.content}></meta>  
         </Helmet>
         <Profile/>
-        <MobileDevider title={CONTACT} />
-        <ContactInfo />
         <Stacks />
         <PastExperience />
         <Projects />

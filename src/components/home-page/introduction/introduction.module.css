@@ -13,10 +13,14 @@
   width:100%;
   border-bottom:1px solid #99cc00;
   @media(min-width: 720px){
-    width: 350px;
+    width: 270px;
     height: 300px;
     border-bottom:none;
     background-color:black;
+  }
+  @media(min-width: 900px){
+    width: 350px;
+    height: 300px;
   }
 }
 
@@ -30,7 +34,7 @@ color:#99cc00;
 @media(min-width: 720px){
   color: #99cc00;
   background-color:black;
-  margin-left:30px;
+  margin-left:18px;
 }
 }
 .container_text p{
@@ -59,6 +63,14 @@ color:#99cc00;
   }
 }
 .desktop_contact{
- margin:30px;
+ margin:18px;
  display:flex;
+ @media(max-width: 720px){
+   display:none;
+ }
+}
+.mobile_contact{
+  @media(min-width: 720px){
+    display:none;
+  }
 }

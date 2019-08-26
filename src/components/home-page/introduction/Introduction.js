@@ -28,6 +28,10 @@ export default function headShotWithText(){
       </div>
         <section className={styles.container_text}>
           <h3 className={styles.desktop_title}>{title}</h3>
+          <section className={styles.mobile_contact}>
+          <RenderIcon iconArray={desktopContactIcons} direction='row' color='#99CC00'/>
+          </section>
+
           <p>{aboutMe}</p>
         </section>
       <section className={styles.desktop_contact}>
