@@ -2,13 +2,10 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import Profile from '../components/home-page/introduction/Introduction';
-import MobileDevider from '../components/section-deviders/MobileDevider';
-import ContactInfo from '../components/home-page/contact/ContactInfo';
 import Projects from '../components/home-page/projects/Projects';
-import Stacks from '../components/home-page/stacks/Stacks';
 import PastExperience from '../components/home-page/background/Background';
-import { CONTACT, PROJECTS } from '../content/titles';
 import { Helmet } from 'react-helmet';
+import TimeLineProjects from '../components/home-page/projects/TimeLineProjects';
 
 
 
@@ -38,7 +35,8 @@ const IndexPage = () => (
         </Helmet>
         <Profile/>
         <PastExperience />
-        <Projects />
+        {/* <Projects /> */}
+        <TimeLineProjects/>
       </Layout> 
 
     )

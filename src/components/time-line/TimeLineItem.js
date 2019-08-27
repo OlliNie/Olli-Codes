@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 
 export default ({ timeLineItem, index }) => {
-  console.log('timeLineItem', timeLineItem.title);
+ 
 
   let bubble = styles.bubble;
   let main = styles.main;

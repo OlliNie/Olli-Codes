@@ -1,8 +1,10 @@
+@import '../layout/variables.css';
 .footer{
-  color:black;
+  border-top:1px solid var(--light_green);
+  color:var(--cream);
   height: 50px;
   display:flex;
-  background-color:#99cc00;
+  background-color:var(--dark_green);
   width:100%;
   justify-content:center;
   align-items: center;

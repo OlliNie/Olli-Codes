@@ -67,7 +67,7 @@ export default () => {
 
   return (
     <section className={styles.projectsContainer}>
-      <Heading heading='Professional Code'/>
+      <Heading heading='Professional Experience'/>
       <ul className={styles.all_projects}>
         {projects}
       </ul>

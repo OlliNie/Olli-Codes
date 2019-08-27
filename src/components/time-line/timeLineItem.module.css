@@ -1,4 +1,4 @@
-@import '../../layout/variables.css';
+@import '../layout//variables.css';
 
 .main{
   margin-top:100px;
@@ -87,14 +87,14 @@
   border-radius: 20px;
   h3, h4{
     margin:0;
-    color: var(--light_green);
+    color: var(--dark_green);
   }
   h5{
-    color: var(--light_green); 
+    color: var(--dark_green); 
   }
 }
 
 .ul{
   background-color: var(--trans_cream);
-  border-radius:20px;
+  border-radius:var(--corner_radius);
 }

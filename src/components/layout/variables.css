@@ -1,7 +1,11 @@
 :root {
+
  --dark_green: rgba(19, 32, 25, 1);
  --light_green: rgba(41, 122, 98, 1);
- --trans_cream: rgba(233, 242, 239, .1);
+ --trans_cream: rgba(233, 242, 239, .4);
  --cream:rgba(233, 242, 239, 1);
- --place_hoder:rgba(19, 32, 25, 1)
+ --place_hoder:rgba(19, 32, 25, 1);
+
+ --corner_radius: 5px;
+
 }

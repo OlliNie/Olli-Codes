@@ -1,14 +1,11 @@
 import React from 'react';
 import TimeLineItem from './TimeLineItem'
 import styles from './fullTimeLine.module.css'
-import Heading from '../../layout/Heading'
-import backgroundTimeLineData from '../../../content/backgroundTimeLineData'
+import Heading from '../layout/Heading'
 
 
-export default () => {
-  const timeLine = backgroundTimeLineData()
-
-  const list = timeLine.map((instance, i) => {
+export default ({heading, timeline}) => {
+  const list = timeline.map((instance, i) => {
     return (
       <li key={i}>
         <TimeLineItem timeLineItem={instance} index={i} />
@@ -18,7 +15,7 @@ export default () => {
 
   return (
     <section className={styles.main}>
-      <Heading heading='Background'/>
+      <Heading heading={heading}/>
       <ul className={styles.ul}>
         {list}
       </ul>

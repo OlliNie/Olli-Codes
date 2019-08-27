@@ -2,6 +2,8 @@
 
 
 header{
+  padding-right:18px;
+  padding-left:7px;
   color:var(--cream);
   background: var(--dark_green);
   border-bottom:1px solid var(--cream);
@@ -36,6 +38,9 @@ header{
   li:hover{
     color:var(--cream)
   }
+}
+.navOptions li:last-child{
+  margin:0;
 }
 .logo{
   fill:var(--cream)
