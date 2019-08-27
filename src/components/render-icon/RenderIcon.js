@@ -6,7 +6,7 @@ export default function RenderIcon({ iconArray, direction, color = 'white'}) {
   const iconList = iconArray.map((icon, i) => {
   
     return (
-      <li key={i} css={{ color: color }}>
+      <li key={i}>
           <IconWithContent icon={icon.icon} text={icon.text} link={icon.link} func={icon.function ? icon.function : null} />
       </li>
     )

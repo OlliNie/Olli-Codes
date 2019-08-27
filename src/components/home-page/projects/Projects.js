@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import styles from './projects.module.css';
-import DesktopDevider from '../../section-deviders/DesktopDevider';
+import Heading from '../../layout/Heading';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -67,7 +67,7 @@ export default () => {
 
   return (
     <section className={styles.projectsContainer}>
-      <DesktopDevider title={'PROFESSIONAL CODE'} />
+      <Heading heading='Professional Code'/>
       <ul className={styles.all_projects}>
         {projects}
       </ul>

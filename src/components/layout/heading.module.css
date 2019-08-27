@@ -1,0 +1,12 @@
+@import './variables.css';
+.main{
+  display:flex;
+  div{
+    flex-grow: 1;
+  }
+  h1{
+    margin:auto;
+    border: 2px solid var(--light_green);
+    padding:10px;
+  }
+}
