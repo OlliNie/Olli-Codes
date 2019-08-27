@@ -37,3 +37,6 @@ header{
     color:var(--cream)
   }
 }
+.logo{
+  fill:var(--cream)
+}

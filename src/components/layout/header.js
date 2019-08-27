@@ -9,7 +9,7 @@ import style from './header.module.css';
 const Header = () => (
   <header className={style.header}>
     <div>
-      <Logo/>
+      <Logo className={style.logo}/>
     </div>
       <ul className={style.navOptions}>
         <li><Link to='/blog'>BLOG</Link></li>
