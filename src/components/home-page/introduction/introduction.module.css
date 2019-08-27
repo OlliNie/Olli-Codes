@@ -1,9 +1,11 @@
+@import '../../layout/variables.css';
+
 .main{
   background-color:rgba(41, 122, 98, 1);
   padding-top: 54px;
   display:block;
   h3{
-    color:rgba(19, 32, 25, 1);
+    color: var(--dark_green);
   }
   a{
     cursor:pointer;

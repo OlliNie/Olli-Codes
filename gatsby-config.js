@@ -55,6 +55,7 @@ module.exports = {
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-pdf`,
+    `postcss-import`,
    
     {
       resolve: `gatsby-source-filesystem`,
