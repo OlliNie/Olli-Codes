@@ -1,3 +1,5 @@
+@import '../../layout/variables.css';
+
 .main{
   margin-top:100px;
   margin-bottom:200px;
@@ -68,13 +70,13 @@
 
 .leader_right{
   margin-right:auto;
-  border:1px solid rgba(41, 122, 98, 1);
+  border:1px solid var(--light_green);
   height: 1px;
   width:50px;
 }
 .leader{
   margin-left:auto;
-  border:1px solid rgba(41, 122, 98, 1);
+  border:1px solid var(--light_green);
   height: 1px;
   width:50px;
 }
@@ -85,14 +87,14 @@
   border-radius: 20px;
   h3, h4{
     margin:0;
-    color: rgba(41, 122, 98, 1);
+    color: var(--light_green);
   }
   h5{
-    color: rgba(41, 122, 98, 1); 
+    color: var(--light_green); 
   }
 }
 
 .ul{
-  background-color:rgba(160, 153, 153, 0.2);
+  background-color: var(--trans_cream);
   border-radius:20px;
 }

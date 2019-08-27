@@ -1,7 +1,8 @@
+@import '../../layout/variables.css';
 .main{
   h1{
     padding-left:18px;
-    background-color:rgba(19, 32, 25, 1);
+    background-color:var(--dark_green);
  
   }
 }
@@ -18,7 +19,7 @@
 
   h1{
     margin:auto;
-    border: 2px solid rgba(41, 122, 98, 1);
+    border: 2px solid var(--light_green);
     padding:10px;
   }
 }

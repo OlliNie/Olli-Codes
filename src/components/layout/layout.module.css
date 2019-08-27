@@ -1,3 +1,5 @@
+@import '../layout//variables.css';
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -12,8 +14,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:rgba(19, 32, 25, 1);
-  color:rgba(233, 242, 239, 1);
+  background-color:var(--dark_green);
+  color:var(--cream);
   position: absolute;
   top: 0;
   width:100%;
