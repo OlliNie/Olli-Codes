@@ -1,0 +1,24 @@
+.main{
+  h1{
+    padding-left:18px;
+    background-color:rgba(19, 32, 25, 1);
+ 
+  }
+}
+.ul{
+  margin-top:150px;
+}
+.heading{
+  margin-top:20px;
+  display:flex;
+  flex-direction:row;
+  div{
+    flex-grow: 1;
+  }
+
+  h1{
+    margin:auto;
+    border: 2px solid rgba(41, 122, 98, 1);
+    padding:10px;
+  }
+}

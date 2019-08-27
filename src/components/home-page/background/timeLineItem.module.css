@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   height:50px;
+  
 }
 .main_right{
   margin-top:50px;
@@ -50,7 +51,7 @@
   position:relative;
   height:200px;
   width:200px;
-  border:1px solid #99cc00;
+
   border-radius:100%;
   overflow: hidden;
 }
@@ -58,7 +59,7 @@
   position:relative;
   height:200px;
   width:200px;
-  border:1px solid pink;
+
   border-radius:100%;
   overflow: hidden;
   order:-1;
@@ -67,13 +68,13 @@
 
 .leader_right{
   margin-right:auto;
-  border:1px solid #99cc00;
+  border:1px solid rgba(41, 122, 98, 1);
   height: 1px;
   width:50px;
 }
 .leader{
   margin-left:auto;
-  border:1px solid #99cc00;
+  border:1px solid rgba(41, 122, 98, 1);
   height: 1px;
   width:50px;
 }
@@ -81,6 +82,17 @@
 
 .text_container{
   padding:18px;
-  background-color:rgba(160, 153, 153, 0.2);
   border-radius: 20px;
+  h3, h4{
+    margin:0;
+    color: rgba(41, 122, 98, 1);
+  }
+  h5{
+    color: rgba(41, 122, 98, 1); 
+  }
+}
+
+.ul{
+  background-color:rgba(160, 153, 153, 0.2);
+  border-radius:20px;
 }

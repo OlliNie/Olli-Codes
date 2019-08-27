@@ -4,7 +4,7 @@ import TimeLineItem from './TimeLineItem'
 import styles from './fullTimeLine.module.css'
 
 
-export default ()=>{
+export default () => {
   const images = useStaticQuery(graphql`
   {
     pittsburgh: file(relativePath: {eq:"pittsburgh.jpg"}){
@@ -40,58 +40,91 @@ export default ()=>{
   `)
   const timelineArray = [
     {
-      img:images.pittsburgh.childImageSharp.fluid,
-      content:`I was born in Pittsburgh and before I had the chance to say my first word "machine",
-      I had allready moved back to Finland with my parents and older sister.  I would oce again at the
-      age of 10 move back to Pittsburgh and later on I would attend the University of Pittburgh at 
-      Johnstown and graduated with a minor in Mathematics, and a B.S degree in Mechanical Engineering.
-    `
+      img: images.pittsburgh.childImageSharp.fluid,
+      allContent: [
+        {
+          content: `Graduated from the University of Pittsburgh with a Bachelor of Science in Mechanical
+        Engineering, and a Minor in Mathematics.  During the school year I worked as a snow board
+        instructor, and between semesters I would intern at Tungsten Diversified Industries located in
+        White Bear Lake, Minnesota.  
+      `,
+          title: `University of Pittsburgh`,
+          subTitle: 'Mechanical Engineer | Minor in Mathematics',
+          date: '2006-2010'
+        }
+      ]
     },
     {
-      img:images.minneapolis.childImageSharp.fluid,
-      content:`fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-     `
+      img: images.minneapolis.childImageSharp.fluid,
+      allContent: [
+        {
+          content: `Moved to Minneapolis to work for Infinite Edge Technologies, a small startup that was
+        then purchased by Guardian Industries.  
+       `,
+          title: 'Guardian Industries',
+          subTitle: 'Wearer of Many Hats | Lead Engineer',
+          date: '2010-2013'
+        },
+        {
+          content: `When Guardian relocated their offices from Minneapolis to Wisconsin, I stayed on as
+        a remote consultant by starting my own company and moved to Utah.
+        I adviced on the design of next generation proprietary
+        manufacturing lines, and trained Guardian's employees`,
+          title: 'Dunwoody College of Technology',
+          subTitle: 'Industrial Controls and Automation',
+          date: '2015-2016'
+        }
+      ]
     },
     {
-      img:images.utah.childImageSharp.fluid,
-      content:`fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf `
+      img: images.utah.childImageSharp.fluid,
+      allContent: [
+        {
+          content: `When Guardian relocated their offices from Minneapolis to Wisconsin, I stayed on as
+          a remote consultant by starting my own company and moved to Utah.
+          I adviced on the design of next generation proprietary
+          manufacturing lines, and trained Guardian's employees`,
+          title: 'On Engineering',
+          subTitle: 'Remote Consultant',
+          date: '2014-2016'
+        },
+      ]
     },
     {
-      img:images.portland.childImageSharp.fluid,
-      content:`fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf
-      fadlfj ldfja dlfjadl jfdal jdlkfjadl sfjadslk fjdl adl;kfj ald;kj aldk;jf aldskjf `
+      img: images.portland.childImageSharp.fluid,
+      allContent: [
+        {
+          content: `After finishing my projects for Guardian and PDS IG-Holding, I took on an Engineer
+             role at Allied Systems.  My core duties included programming and testing of marine equipment.`,
+          title: 'Allied Systems',
+          subTitle: 'Design Engineer',
+          date: '2016-2019'
+        }
+      ]
     },
   ];
-  
-  const list = timelineArray.map((instance,i)=>{
 
-    return(
-    <li key={i}>
-      <TimeLineItem timeLineItem={instance} index={i}/>
-    </li>
+  const list = timelineArray.map((instance, i) => {
+
+    return (
+      <li key={i}>
+        <TimeLineItem timeLineItem={instance} index={i} />
+      </li>
     )
   })
 
   return (
-    <ul className={styles.ul}>
-      {list}
-    </ul>
+    <section className={styles.main}>
+      <section className={styles.heading}>
+          <div></div>
+          <h1>My Background</h1>
+          <div></div>
+  
+      </section>
+      <ul className={styles.ul}>
+        {list}
+      </ul>
+    </section>
 
   )
 

@@ -47,12 +47,12 @@ export default function headShotWithText(){
         <section className={styles.container_text}>
           {navState.display === 'about_me' ? <h3 className={styles.desktop_title}>{title}</h3> : <h3 className={styles.desktop_title}>{contactMe.title}</h3>}
           <section className={styles.mobile_contact}>
-          <RenderIcon iconArray={iconsWithToggleText} direction='row' color='#99CC00'/>
+          <RenderIcon iconArray={iconsWithToggleText} direction='row' color='rgba(19, 32, 25, 1)'/>
           </section>
           {navState.display === 'about_me' ? <p>{aboutMe}</p> : <p>{contactMe.content}</p>}
         </section>
       <section className={styles.desktop_contact}>
-        <RenderIcon iconArray={iconsWithToggleText} direction='column' color='#99CC00'/>
+        <RenderIcon iconArray={iconsWithToggleText} direction='column' color='rgba(19, 32, 25, 1)'/>
       </section>
     </section>
   )
