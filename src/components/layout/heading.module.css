@@ -1,12 +1,11 @@
 @import './variables.css';
 .main{
+  margin: var(--margin);
   display:flex;
-  div{
+
  
-  }
   h1{
     flex-grow:1;
-    margin: 0 18px 0 18px;
     border: 2px solid var(--light_green);
     padding:10px;
   }

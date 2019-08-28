@@ -20,12 +20,18 @@ export default () => {
    }
  }
  `)
- console.log('images', images);
   const timelineArray = [
     {
       img: images.studio_taimela.childImageSharp.fluid,
+      title: 'Studio Taimela',
       allContent: [
         {
+          title:'Focus',
+          content:`Studio Taimela's website built on the React framework with emphasis on SEO, responsive deisign, and performance`
+
+        },
+        {
+          title:'testimonial',
           content: `"Olli developed Studio Taimela’s website perfectly
           according to design for all screen resolutions. 
           His enthusiasm towards technology is apparent in 
@@ -35,21 +41,27 @@ export default () => {
           website, plus his continuously dedication to success
           made working with him a wonderful experience."
           -Studio Taimela 
-     `,
-          title: `Studio Taimela`,
-          subTitle: 'Front End Project',
+     `
         }
       ]
     },
   
     {
       img: images.code_for_pdx.childImageSharp.fluid,
+      title: 'Code For PDX',
       allContent: [
         {
+          title: 'Focus',
           content: `A project to automate the expungement of qualifying criminal records.
            This project is done in conjunction with the Metropolitan Public Defender's Office`,
-          title: 'Code For PDX',
-          subTitle: 'Full Stack Project',
+        },
+        {
+          title: 'Last Contribution',
+          content: 'TypeScript enforced API service geared towards communicating with a back end that is operating on a Flask framework'
+        },
+        {
+          title:'Workin On',
+          content: 'TypeScript enforced React component that renders search results that is utilizing Redux state managment'
         }
       ]
     },

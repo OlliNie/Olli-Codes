@@ -2,8 +2,8 @@
 
 
 header{
-  padding-right:18px;
-  padding-left:7px;
+  padding-right: var(--margin);
+  padding-left:21px;
   color:var(--cream);
   background: var(--dark_green);
   border-bottom:1px solid var(--cream);

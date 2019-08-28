@@ -29,7 +29,7 @@
   height:100px;
   top:-50px;
   position:absolute;
-  padding-left:18px;
+  padding-left: var(--margin);
   padding-right:50px;
   display:flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   height:100px;
   top:-50px;
   position:absolute;
-  padding-right:18px;
+  padding-right: var(--margin);
   padding-left:50px;
   display:flex;
   flex-direction: column;

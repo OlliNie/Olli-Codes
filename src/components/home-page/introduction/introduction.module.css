@@ -70,7 +70,7 @@ flex-direction: column;
   }
 }
 .desktop_contact{
- margin:18px 18px 18px auto;
+ margin:18px var(--margin) 18px var(--margin);
  display:flex;
 
  @media(max-width: 720px){
