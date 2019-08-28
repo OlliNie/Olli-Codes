@@ -5,7 +5,9 @@
   h3, h4 {
     color:var(--dark_green);
   }
-  
+  ul li{
+    margin:0;
+  }
   h3{
     margin: 0;
     padding:10px;

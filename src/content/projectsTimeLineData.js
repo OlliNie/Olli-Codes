@@ -24,6 +24,16 @@ export default () => {
     {
       img: images.studio_taimela.childImageSharp.fluid,
       title: 'Studio Taimela',
+      links: [
+        {
+          link:'',
+          title:'Github'
+        },
+        {
+          link:'http://www.studiotaimela.com',
+          title:'Studio Taimela'
+        }
+      ],
       allContent: [
         {
           title:'Focus',
@@ -49,6 +59,12 @@ export default () => {
     {
       img: images.code_for_pdx.childImageSharp.fluid,
       title: 'Code For PDX',
+      links: [
+        {
+          link:'j',
+          title:'Github'
+        }
+      ],
       allContent: [
         {
           title: 'Focus',
