@@ -44,11 +44,7 @@ flex-direction: column;
   margin-left:18px;
 }
 }
-.container_text p{
-  @media(max-width:720px){
-    margin:0;
-  }
-}
+
 
 .container_title_text{
  

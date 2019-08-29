@@ -7,7 +7,7 @@ import Heading from '../layout/Heading'
 export default ({heading, timeline}) => {
   const list = timeline.map((instance, i) => {
     return (
-      <li key={i}>
+      <li className={styles.li} key={i}>
         <TimeLineItem timeLineItem={instance} index={i} />
       </li>
     )

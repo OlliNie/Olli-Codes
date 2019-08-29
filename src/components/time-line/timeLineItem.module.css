@@ -1,24 +1,35 @@
 @import '../layout//variables.css';
 
 .main{
-  margin-top:100px;
-  margin-bottom:200px;
-  width:calc(50% + 100px);
   display:flex;
   justify-content: space-between;
   align-items: center;
-  height:50px;
+  @media(min-width:1000px){
+    margin-top:100px;
+    width:calc(50% + 100px);
+    height:50px;
+    margin-bottom:200px; 
+  }
+  @media(max-width:1000px){
+    padding-right: var(--margin);
+  }
   
 }
 .main_right{
-  margin-top:50px;
-  margin-bottom:200px;
-  width:calc(50% + 100px);
+
   display:flex;
   justify-content: space-between;
   align-items: center;
   margin-left:auto;
-  height:50px;
+  @media(min-width:1000px){
+    margin-top:50px;
+    width:calc(50% + 100px);
+    height:50px;
+    margin-bottom:200px;
+  }
+  @media(max-width:1000px){
+    padding-left: var(--margin);
+  }
 }
 .x_axis{
   position:relative;
@@ -26,59 +37,72 @@
 }
 
 .y_axis{
-  height:100px;
-  top:-50px;
-  position:absolute;
+  
   padding-left: var(--margin);
-  padding-right:50px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
+  padding-right:var(--margin);
+  @media(min-width:1000px){
+    height:100px;
+    top:-50px;
+    position:absolute;
+  }
+  
+  
 }
 .y_axis_right{
-  height:100px;
-  top:-50px;
-  position:absolute;
+  
   padding-right: var(--margin);
-  padding-left:50px;
+  padding-left: var(--margin);
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width:100%;
+  @media(min-width:1000px){
+    height:100px;
+    top:-50px;
+    position:absolute; 
+    }
+}
+.bubble_container_right{
+  position:relative;
+ order:-1;
+}
+.bubble_container_left{
+  position:relative;
+  order:1;
 }
 .bubble{
-  position:relative;
   height:200px;
   width:200px;
-
   border-radius:100%;
   overflow: hidden;
-}
-.bubble_right{
   position:relative;
-  height:200px;
-  width:200px;
+  @media(min-width: 1000px){
 
-  border-radius:100%;
-  overflow: hidden;
-  order:-1;
-
+  }
 }
 
 .leader_right{
-  margin-right:auto;
+  background-color: var(--light_green);
+  left:200px;
+  top:100px;
+  position:absolute;
+  width:var(--margin);
+  height:1px;
   border:1px solid var(--light_green);
-  height: 1px;
-  width:50px;
 }
 .leader{
-  margin-left:auto;
+  background-color: var(--light_green);
+  left: calc(0px - var(--margin));
+  top:100px;
+  position:absolute;
+  width:var(--margin);
+  height:1px;
   border:1px solid var(--light_green);
-  height: 1px;
-  width:50px;
 }
 
 
@@ -98,3 +122,4 @@
   background-color: var(--trans_cream);
   border-radius:var(--corner_radius);
 }
+
