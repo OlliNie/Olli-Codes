@@ -23,15 +23,15 @@ export default () => {
   const timelineArray = [
     {
       img: images.studio_taimela.childImageSharp.fluid,
-      title: 'Studio Taimela',
+      title: 'Studio Taimela:',
       links: [
         {
-          link:'',
-          title:'Github'
+          link:'https://github.com/SteelFace87/Studio-Taimela',
+          title:'GitHub'
         },
         {
           link:'http://www.studiotaimela.com',
-          title:'Studio Taimela'
+          title:'Live-Site'
         }
       ],
       allContent: [
@@ -58,11 +58,11 @@ export default () => {
   
     {
       img: images.code_for_pdx.childImageSharp.fluid,
-      title: 'Code For PDX',
+      title: 'Code For PDX:',
       links: [
         {
-          link:'j',
-          title:'Github'
+          link:'https://github.com/codeforpdx/recordexpungPDX',
+          title:'GitHub'
         }
       ],
       allContent: [
