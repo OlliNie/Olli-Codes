@@ -4,7 +4,6 @@ import BackgroundImage from 'gatsby-background-image'
 
 export default ({ project }) => {
 
-
   const handleLink = (link) => (<a className={styles.link} target="_blank" href={link.link}>{link.title}</a>);
   const linkList = () => {
     if (project.links) {
@@ -18,8 +17,7 @@ export default ({ project }) => {
       ) 
     } else {
       return null
-    }
-    }
+    }}
   
     const contentList = project.allContent.map((content, i) => (
       <li key={i}>
@@ -35,7 +33,6 @@ export default ({ project }) => {
     return (
 
       <section className={styles.main}>
-
         <div />
         <BackgroundImage className={styles.bubble} fluid={project.img} />
         <h3 className={styles.headline}>{headLine}</h3>
