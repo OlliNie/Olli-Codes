@@ -66,7 +66,7 @@ import { useStaticQuery, graphql } from "gatsby"
        `,
           title: 'Guardian Industries',
           subTitle: 'Wearer of Many Hats | Lead Engineer',
-          date: '2010-2013'
+          date: '2011-2014'
         },
         {
           content: `While working for Guardian, it became apparent that we needed someone on our team to
@@ -74,7 +74,7 @@ import { useStaticQuery, graphql } from "gatsby"
           night classes and graduated with a technology degree in Industrial Controls and Automation.`,
           title: 'Dunwoody College of Technology',
           subTitle: 'Industrial Controls and Automation',
-          date: '2015-2016'
+          date: '2011-2012'
         }
       ]
     },
