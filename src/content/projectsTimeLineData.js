@@ -1,5 +1,6 @@
-
+import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import { FaGlobe, FaGithub } from 'react-icons/fa';
 
 export default () => {
   const images = useStaticQuery(graphql`
@@ -27,11 +28,11 @@ export default () => {
       links: [
         {
           link:'https://github.com/SteelFace87/Studio-Taimela',
-          title:'GitHub'
+          title: <FaGithub/>
         },
         {
           link:'http://www.studiotaimela.com',
-          title:'Live-Site'
+          title:<FaGlobe/>
         }
       ],
       allContent: [
@@ -62,7 +63,7 @@ export default () => {
       links: [
         {
           link:'https://github.com/codeforpdx/recordexpungPDX',
-          title:'GitHub'
+          title:<FaGithub/>
         }
       ],
       allContent: [

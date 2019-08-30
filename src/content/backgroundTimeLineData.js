@@ -32,6 +32,13 @@ import { useStaticQuery, graphql } from "gatsby"
         }
       }
     }
+    tech: file(relativePath: {eq:"tech.jpg"}){
+      childImageSharp{
+        fluid(maxWidth:300){
+              ...GatsbyImageSharpFluid
+        }
+      }
+    }
   
   }
   `)
@@ -96,6 +103,19 @@ import { useStaticQuery, graphql } from "gatsby"
           title: 'Allied Systems',
           subTitle: 'Design Engineer',
           date: '2016-2019'
+        }
+      ]
+    },
+    {
+      img: images.tech.childImageSharp.fluid,
+      allContent: [
+        {
+          content: `About 2 years ago I started studying the React framework and JavascriptDevelopment.
+           After studying for about a year after work a
+      `,
+          title: `Career Change`,
+          subTitle: 'JavaScript Developer',
+          date: '2017'
         }
       ]
     },

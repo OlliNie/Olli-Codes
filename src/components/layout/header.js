@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Logo from '../../images/logo.svg';
+import MobileLogo from '../../images/logo_mobile.svg';
 import { Link } from 'gatsby';
 import style from './header.module.css';
 
@@ -9,6 +10,7 @@ import style from './header.module.css';
 const Header = () => (
   <header className={style.header}>
     <div>
+      <MobileLogo className={style.mobile_logo}/>
       <Logo className={style.logo}/>
     </div>
       <ul className={style.navOptions}>

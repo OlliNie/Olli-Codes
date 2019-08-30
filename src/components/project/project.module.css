@@ -16,7 +16,6 @@
   h4{
     margin:0;
   }
-
   position:relative;
   margin-left: var(--margin);
   margin-right: var(--margin);
@@ -72,7 +71,7 @@
 }
 .hyperlink{
  color:var(--dark_green);
- display:none;
+
  @media(min-width:720px){
    display:block;
  }
@@ -90,21 +89,22 @@ left:0px;
 }
 }
 .headline a:hover{
-  border: 1px solid var(--cream);
-  background: var(--dark_green);
-  color: var(--light_green);
+  color: var(--cream);
 }
 .headLine_items{
   display:flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   @media(min-width:720px){
     justify-content: flex-start;
+    flex-direction:row;
   }
 }
 .link{
-  padding:2px;
-  border: 1px solid var(--dark_green);
-  border-radius: var(--corner_radius);
+ 
+ 
+
   margin-left:15px;
 
 }

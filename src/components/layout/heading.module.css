@@ -5,6 +5,10 @@
 
  
   h1{
+    text-align:center;
+    @media(min-width:720px){
+      text-align:left;
+    }
     flex-grow:1;
     border: 2px solid var(--light_green);
     padding:10px;

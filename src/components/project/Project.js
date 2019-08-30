@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './project.module.css';
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image';
+
+
 
 export default ({ project }) => {
 
-  const handleLink = (link) => (<a className={styles.link} target="_blank" href={link.link}>{link.title}</a>);
+  const handleLink = (link) => (<li><a className={styles.link} target="_blank" href={link.link}>{link.title}</a></li>);
   const linkList = () => {
     if (project.links) {
       return project.links.map((link, i) => {
@@ -28,7 +30,7 @@ export default ({ project }) => {
     const headLine=
     <ul className={styles.headLine_items}>
       <li>{project.title}</li>
-      {linkList()}
+      {<ul css={{display:'flex'}}> {linkList()}</ul>}
     </ul>
     return (
 
