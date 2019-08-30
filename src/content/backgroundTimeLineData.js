@@ -48,9 +48,8 @@ import { useStaticQuery, graphql } from "gatsby"
       allContent: [
         {
           content: `Graduated from the University of Pittsburgh with a Bachelor of Science in Mechanical
-        Engineering, and a Minor in Mathematics.  During the school year I worked as a snow board
-        instructor, and between semesters I would intern at Tungsten Diversified Industries located in
-        White Bear Lake, Minnesota.  
+        Engineering, and a Minor in Mathematics.  I also did an internship at Tungsten Diversified Industries located in
+        White Bear Lake, Minnesota. 
       `,
           title: `University of Pittsburgh`,
           subTitle: 'Mechanical Engineer | Minor in Mathematics',
@@ -63,17 +62,16 @@ import { useStaticQuery, graphql } from "gatsby"
       allContent: [
         {
           content: `Moved to Minneapolis to work for Infinite Edge Technologies, a small startup that was
-        then purchased by Guardian Industries.  
+        then purchased by Guardian Industries. 
        `,
           title: 'Guardian Industries',
           subTitle: 'Wearer of Many Hats | Lead Engineer',
           date: '2010-2013'
         },
         {
-          content: `When Guardian relocated their offices from Minneapolis to Wisconsin, I stayed on as
-        a remote consultant by starting my own company and moved to Utah.
-        I adviced on the design of next generation proprietary
-        manufacturing lines, and trained Guardian's employees`,
+          content: `While working for Guardian, it became apparent that we needed someone on our team to
+          troubleshoot and program the equipment that we were designing.  To fill that gap I enrolled in
+          night classes and graduated with a technology degree in Industrial Controls and Automation.`,
           title: 'Dunwoody College of Technology',
           subTitle: 'Industrial Controls and Automation',
           date: '2015-2016'
@@ -84,10 +82,11 @@ import { useStaticQuery, graphql } from "gatsby"
       img: images.utah.childImageSharp.fluid,
       allContent: [
         {
-          content: `When Guardian relocated their offices from Minneapolis to Wisconsin, I stayed on as
-          a remote consultant by starting my own company and moved to Utah.
-          I adviced on the design of next generation proprietary
-          manufacturing lines, and trained Guardian's employees`,
+          content: `When Guardian relocated their offices from Minneapolis to Wisconsin,
+           I stayed on as a remote consultant by starting my own company and moved to Utah.
+          I adviced on the design of next-generation proprietary manufacturing lines and
+           trained Guardian’s employees.  I also worked with PDS IG Holding,
+            a manufacturing firm that was building equipment for Guardian.`,
           title: 'On Engineering',
           subTitle: 'Remote Consultant',
           date: '2014-2016'
@@ -98,7 +97,7 @@ import { useStaticQuery, graphql } from "gatsby"
       img: images.portland.childImageSharp.fluid,
       allContent: [
         {
-          content: `After finishing my projects for Guardian and PDS IG-Holding, I took on an Engineer
+          content: `After finishing my projects for Guardian and PDS IG Holding, I took on an Engineer
              role at Allied Systems.  My core duties included programming and testing of marine equipment.`,
           title: 'Allied Systems',
           subTitle: 'Design Engineer',
@@ -110,8 +109,11 @@ import { useStaticQuery, graphql } from "gatsby"
       img: images.tech.childImageSharp.fluid,
       allContent: [
         {
-          content: `About 2 years ago I started studying the React framework and JavascriptDevelopment.
-           After studying for about a year after work a
+          content: `About 2 years ago I started studying the React framework and Javascript development, and
+          found myself closing down the local coffee shop on the regular.  Once I realized this is really what
+          I want to do, I enrolled in Alchemy Code Lab and graduated with a Full Stack JavaScript Development
+          certificate.  Since then I have been enjoying working on numerous projects, and I am hoping to 
+          find work as a JavaScript developer with an emphasis on the back-end.
       `,
           title: `Career Change`,
           subTitle: 'JavaScript Developer',
@@ -120,5 +122,6 @@ import { useStaticQuery, graphql } from "gatsby"
       ]
     },
   ];
+ 
   return timelineArray;
 }
