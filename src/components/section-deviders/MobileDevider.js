@@ -4,7 +4,7 @@ export default function MobileDevider({ title }) {
   return (
     <section css={{
       whiteSpace: 'nowrap',
-      margin: '30px 0 30px 0',
+      margin: '18px 0 18px 0',
       display: 'flex',
       width: '100%',
       flexDirection: 'row',

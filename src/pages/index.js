@@ -2,13 +2,15 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import Profile from '../components/home-page/introduction/Introduction';
-import MobileDevider from '../components/section-deviders/MobileDevider';
-import ContactInfo from '../components/home-page/contact/ContactInfo';
-import Projects from '../components/home-page/projects/Projects';
-import Stacks from '../components/home-page/stacks/Stacks';
 import PastExperience from '../components/home-page/background/Background';
-import { CONTACT, PROJECTS } from '../content/titles';
+import AllProjects from '../components/project/AllProjects';
 import { Helmet } from 'react-helmet';
+
+//testing
+
+import projectsTimeLineData from '../content/projectsTimeLineData';
+
+
 
 
 
@@ -27,6 +29,7 @@ const IndexPage = () => (
     }
     `
   } render={(data) => {
+    const stuff=projectsTimeLineData;
 
     return (
       
@@ -37,11 +40,9 @@ const IndexPage = () => (
           <meta name="keywords" content={data.site.siteMetadata.content}></meta>  
         </Helmet>
         <Profile/>
-        <MobileDevider title={CONTACT} />
-        <ContactInfo />
-        <Stacks />
         <PastExperience />
-        <Projects />
+        <AllProjects/>
+
       </Layout> 
 
     )

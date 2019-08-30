@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image';
 import styles from './projects.module.css';
-import DesktopDevider from '../../section-deviders/DesktopDevider';
+import Heading from '../../layout/Heading';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -50,12 +50,12 @@ export default () => {
         <section className={styles.img_text_container} >
           <Img className={styles.image} fluid={node.frontmatter.image.childImageSharp.fluid}></Img>
           {node.frontmatter.testimonial ?
-            <container className={styles.text_container}>
+            <section className={styles.text_container}>
               <p >{node.frontmatter.testimonial}</p>
-            </container> :
-            <container className={styles.text_container}>
+            </section> :
+            <section className={styles.text_container}>
               <div className={styles.text_container} dangerouslySetInnerHTML={{ __html: node.html }} />
-            </container>}
+            </section>}
         </section>
         <section className={styles.links}>
           {github !== 'none' ? <a href={node.frontmatter.github} target="_blank">See the Code</a> : null}
@@ -67,7 +67,7 @@ export default () => {
 
   return (
     <section className={styles.projectsContainer}>
-      <DesktopDevider title={'PROFESSIONAL CODE'} />
+      <Heading heading='Professional Experience'/>
       <ul className={styles.all_projects}>
         {projects}
       </ul>

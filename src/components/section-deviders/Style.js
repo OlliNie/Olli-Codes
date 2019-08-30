@@ -40,7 +40,7 @@ export default Watch(
             display:'none',
           '@media (min-width: 720px)': {
             display: `block`,
-            color:'#9c0',
+            color:'#99cc00',
             alignSelf: 'center',
             fontSize: '25px',
             margin: 'auto 0 auto 0'

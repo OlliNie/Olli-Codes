@@ -1,0 +1,20 @@
+
+.ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  li{
+    align-self: center;
+ 
+    font-size: 32px;
+  }
+  p{
+    margin:0;
+  }
+}
+.icon_with_content{
+  display:flex;
+  justify-content: center;
+}

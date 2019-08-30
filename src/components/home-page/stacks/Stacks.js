@@ -7,11 +7,14 @@ import MobileStacks from './MobileFrontEndStack';
 export default function Stacks() {
 
   return (
-    <section css={{ display: 'flex', marginBottom: '30px', width:'100%' }}>
+    <section css={{ display: 'flex', marginBottom: '30px', width:'100%', color:'#99cc00' }}>
       <Tab title={STACK} />
       <section css={{display:'flex', justifyContent:'center', width:'100%'}}>
         <PcStack />
       </section>
+
+
+
       <section css={{
         display: 'flex',
         flexDirection: 'column',
@@ -20,7 +23,7 @@ export default function Stacks() {
           display: `none`,
         }
       }}>
-        <MobileStacks />
+        {/* <MobileStacks /> */}
 
       </section>
     </section>

@@ -1,0 +1,84 @@
+@import '../../layout/variables.css';
+
+.main{
+  background-color: var(--light_green);
+  padding-top: 54px;
+  display: block;
+  h3{
+    color: var(--dark_green);
+  }
+  a{
+    cursor:pointer;
+  }
+  a svg:hover{
+    color: var(--cream);
+  }
+  @media(min-width: 720px){
+    display:flex;
+    border-bottom: solid 1px var(--cream);
+  }
+}
+.img_headshot{
+ 
+  z-index: 2;
+  width:100%;
+  border-bottom:1px solid var(--cream);
+  @media(min-width: 720px){
+    width: 270px;
+    height: 300px;
+    border-bottom:none;
+  
+  }
+  @media(min-width: 900px){
+    width: 350px;
+    height: 300px;
+  }
+}
+
+.container_text{
+  display:flex;
+  justify-content: center;
+flex-direction: column;
+padding:var(--margin);
+
+
+@media(min-width: 720px){
+  padding:18px 18px 0 18px;
+ 
+  margin-left:18px;
+}
+}
+
+
+.container_title_text{
+ 
+  @media(min-width:720px){
+    display:none;
+  }
+  text-align:center;
+  padding:18px;
+  h4{
+    margin:0;
+ 
+  }
+
+}
+.desktop_title{
+  display:none;
+  @media(min-width: 720px){
+    display:block
+  }
+}
+.desktop_contact{
+ margin:18px var(--margin) 18px var(--margin);
+ display:flex;
+
+ @media(max-width: 720px){
+   display:none;
+ }
+}
+.mobile_contact{
+  @media(min-width: 720px){
+    display:none;
+  }
+}

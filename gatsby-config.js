@@ -55,6 +55,7 @@ module.exports = {
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-pdf`,
+    `postcss-import`,
    
     {
       resolve: `gatsby-source-filesystem`,
@@ -76,6 +77,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `timeline_images`,
+        path: `${__dirname}/src/images/time-line`,
       },
     },
     `gatsby-transformer-sharp`,

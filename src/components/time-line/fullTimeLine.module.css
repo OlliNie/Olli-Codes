@@ -1,0 +1,39 @@
+@import '../layout/variables.css';
+.main{
+  h1{
+    padding-left:18px;
+    background-color:var(--dark_green);
+ 
+  }
+}
+.ul{
+  @media(min-width: 1000px){
+    margin-top:210px;
+  }
+  @media(min-width: 1200px){
+    margin-top:170px;
+  }
+  @media(min-width: 1400px){
+    margin-top:140px;
+  }
+  @media(min-width: 2000px){
+    margin-top:120px;
+  }
+}
+.heading{
+  margin-top:20px;
+  display:flex;
+  flex-direction:row;
+  div{
+    flex-grow: 1;
+  }
+
+  h1{
+    margin:auto;
+    border: 2px solid var(--light_green);
+    padding:10px;
+  }
+}
+.li{
+  margin-bottom: var(--margin);
+}

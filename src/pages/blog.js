@@ -33,7 +33,7 @@ const IndexPage = () => {
               return (
                 <Link key={i} to={node.fields.slug} >
                   <div className={styles.blogThumbnail}>
-                    <h1 className={styles.title}>{node.frontmatter.title}</h1>
+                    <h3 className={styles.title}>{node.frontmatter.title}</h3>
                     <span>{node.frontmatter.date}</span>
                     <p className={styles.description}> {node.frontmatter.description}</p>
                   </div>

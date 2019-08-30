@@ -1,13 +1,25 @@
+@import '../layout//variables.css';
+
 
 header{
-  background: #99cc00;
+  padding-right: var(--margin);
+  padding-left: var(--margin);
+  color:var(--cream);
+  background: var(--dark_green);
+  border-bottom:1px solid var(--cream);
   display: flex;
   position:fixed;
+  align-items: center;
   z-index: 75;
   width: 100vw;
+  height:56px;
   svg{
+    
+    width:50px;
+     @media(min-width:720px){
+      width:130px;
+    }
     height: 50px;
-    width: 180px;
   }
   ul{
     display:flex;
@@ -30,6 +42,24 @@ header{
 
 .navOptions{
   li:hover{
-    color:white
+    color:var(--cream)
+  }
+}
+.navOptions li:last-child{
+  margin:0;
+}
+.logo{
+  fill:var(--cream);
+  display:none;
+  @media(min-width:720px){
+    display:flex;
+  }
+}
+.mobile_logo{
+  fill:var(--cream);
+  position:relative;
+  top: 3px;
+  @media(min-width:720px){
+    display:none;
   }
 }

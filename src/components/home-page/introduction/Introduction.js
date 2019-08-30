@@ -1,98 +1,62 @@
-import React from 'react';
 
-import Img from 'gatsby-image';
-import BackgroundImage from 'gatsby-background-image'
-import { aboutMe } from '../../../content/aboutMe';
-import { StaticQuery, graphql } from "gatsby";
+import React, { useState } from 'react'
+import Img from 'gatsby-image'
+import styles from './introduction.module.css'
+import { useStaticQuery, graphql } from "gatsby"
+import { aboutMe, title } from '../../../content/aboutMe'
+import { desktopContactIcons, contactMe } from '../../../content/contact'
+import RenderIcon from '../../render-icon/RenderIcon'
+import { FaEnvelope } from 'react-icons/fa';
 
 
-export default function Profile() {
-  return <StaticQuery query={graphql`
+export default function headShotWithText(){
+  const [navState, setNavState] = useState(
+    {
+      display:'about_me'
+    }
+  );
+  const updateClick = ()=>{
+    const textToDisplay = ()=> navState.display === 'about_me' ? 'contact' : 'about_me';
+    setNavState({ display: textToDisplay()});
+  };
+
+  const iconColor=styles.icon_color;
+  console.log('icon color', iconColor);
+
+  const iconsWithToggleText = [...desktopContactIcons, {
+    icon: <FaEnvelope/>,
+    function: updateClick
+  }]
+
+  const images  = useStaticQuery(graphql`
   {
     faceShot: file(relativePath: {eq:"OllieNieminen.png"}){
-          childImageSharp{
-            fluid(maxWidth:1600){
+      childImageSharp{
+        fluid(maxWidth:1000){
               ...GatsbyImageSharpFluid
-            }
-          }
-    }
-banner: file(relativePath: {eq:"banner.jpg"}){
-  childImageSharp{
-    fluid(maxWidth:1400){
-      ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
-}
-smallProfile: file(relativePath: {eq:"ThumbnailHeadShot.jpg"}){
-  childImageSharp{
-    fluid(maxWidth:1400){
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-
-  }
-  `}
-  render={(data)=>{
-
-    return (
-      <section className='Profile'>
-       
-        <div css={{ height: '54px' }}></div>
-        <section className='pcView' css={{
-          marginBottom: '30px',
-          display: 'none',
-          '@media (min-width: 720px)': {
-            display: 'block'
-          }
-        }}>
-  
-          <BackgroundImage fluid={data.banner.childImageSharp.fluid}>
-            <div css={{
-              display: 'flex', flexDirection: 'row', justifyContent: 'center'
-            }}>
-  
-              <Img fluid={data.faceShot.childImageSharp.fluid} css={{
-                width: '600px', height: '290px',
-                alignSelf: 'flex-end', zIndex: '2'
-              }} />
-  
-              <div css={{
-                backgroundColor: '8E8686', width: '100%', alignSelf: 'center', textAlign: 'left', padding: '60px'
-              }}>
-  
-                <p css={{
-                  fontSize: '22px',
-                  color: 'white',
-                  letterSpacing: '1px'
-                }}>
-                  {aboutMe}
-                </p>
-              </div>
-  
-  
-            </div>
-          </BackgroundImage>
-        </section>
-        <section className="mobileView" css={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          '@media (min-width: 720px)': {
-            display: 'none'
-          }
-        }}>
-          <Img fluid={data.smallProfile.childImageSharp.fluid} css={{
-            width: '100%', height: 'auto',
-            zIndex: '2'
-          }} />
-          <p css={{
-            padding: '30px 20px 0 20px',
-            color: 'white',   
-          }}>{aboutMe}</p>
-        </section>
+  `)
+  return(
+    <section className={styles.main}>
+      <section className={styles.container_title_text}>
+        <h4>{title}</h4>
       </section>
-    )
-  }}/>
+      <div>
+        <Img fluid={images.faceShot.childImageSharp.fluid} className={styles.img_headshot} />
+      </div>
+        <section className={styles.container_text}>
+          {navState.display === 'about_me' ? <h3 className={styles.desktop_title}>{title}</h3> : <h3 className={styles.desktop_title}>{contactMe.title}</h3>}
+          <section className={styles.mobile_contact}>
+          <RenderIcon iconArray={iconsWithToggleText} direction='row' color={iconColor} className={styles.iconColor}/>
+          </section>
+          {navState.display === 'about_me' ? <p>{aboutMe}</p> : <p>{contactMe.content}</p>}
+        </section>
+      <section className={styles.desktop_contact}>
+        <RenderIcon iconArray={iconsWithToggleText} direction='column' color={iconColor} className={styles.iconColor}/>
+      </section>
+    </section>
+  )
 }
-

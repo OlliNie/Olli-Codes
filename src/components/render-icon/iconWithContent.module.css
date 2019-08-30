@@ -1,0 +1,10 @@
+@import '../layout//variables.css';
+
+.icon_with_content{
+  display:flex;
+  justify-content: center;
+  color: var(--dark_green)
+}
+.icon_with_content p:hover{
+  color: var(--cream);
+}
