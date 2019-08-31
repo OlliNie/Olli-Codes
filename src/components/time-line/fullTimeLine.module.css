@@ -1,5 +1,11 @@
 @import '../layout/variables.css';
 .main{
+  @media(min-width:1000px){
+    margin-bottom:250px;
+  }
+  @media(min-width:1200px){
+    margin-bottom:210px;
+  }
   h1{
     padding-left:18px;
     background-color:var(--dark_green);
