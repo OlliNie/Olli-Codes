@@ -1,7 +1,7 @@
 @import '../components/layout//variables.css';
 
-.spacer{
-  height:75px;
+.blogContainer{
+  padding-top:75px;
 }
 
 .blogThumbnail{
@@ -10,8 +10,6 @@
   border-radius: var(--corner_radius);
   color: var(--cream);
   margin: var(--margin);
-
-
 }
 .blogThumbnail:hover{
   border: 2px solid var(--cream);
