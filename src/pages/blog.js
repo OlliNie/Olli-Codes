@@ -23,25 +23,29 @@ const IndexPage = () => {
       }
     }
     
-  `} render={data => {
+  `} render = { data => {
       const postList = data.allMarkdownRemark.edges;
-      const individualPost = ({node}, i)=>{
+      const individualPost = ({ node }, i) => {
         return (
-          <Link key={i} to={node.fields.slug} >
-            <section className={styles.blogThumbnail}>
-              <h3 className={styles.title}>{node.frontmatter.title}</h3>
-              <span>{node.frontmatter.date}</span>
-              <p className={styles.description}> {node.frontmatter.description}</p>
-            </section>
-          </Link>
+          <li key={i}>
+            <Link to={node.fields.slug} >
+              <section className={styles.blogThumbnail}>
+                <h3 className={styles.title}>{node.frontmatter.title}</h3>
+                <span>{node.frontmatter.date}</span>
+                <p className={styles.description}> {node.frontmatter.description}</p>
+              </section>
+            </Link>
+          </li>
         )
       };
       return (
         <Layout>
           <section className={styles.blogContainer}>
-            {postList.map(individualPost)}
+            <ul>
+              { postList.map(individualPost) }
+            </ul>
           </section>
-      </Layout>
+        </Layout>
       )
     }}
   >
